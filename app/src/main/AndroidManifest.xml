@@ -20,6 +20,8 @@
                 android:value="" />
         </activity>
         <activity
+            android:noHistory="true"
+            android:theme="@style/Theme.SplashActivity"
             android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
