@@ -3,12 +3,13 @@ package com.example.fitnessapplication.Adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fitnessapplication.R
 import com.example.fitnessapplication.databinding.DaysListItemBinding
 
-class DayAdapter: ListAdapter<DayModel, DayAdapter.DayHolder> {
+class DayAdapter: ListAdapter<DayModel, DayAdapter.DayHolder>(MyComparator()) {
 
     class DayHolder(view: View): RecyclerView.ViewHolder(view){
         private val binding = DaysListItemBinding.bind(view)
@@ -27,6 +28,18 @@ class DayAdapter: ListAdapter<DayModel, DayAdapter.DayHolder> {
     }
 
     override fun onBindViewHolder(holder: DayHolder, position: Int) {
+        holder.settingData(getItem(position))
+    }
+
+    class MyComparator: DiffUtil.ItemCallback<DayModel>(){
+
+        override fun areItemsTheSame(oldItem: DayModel, newItem: DayModel): Boolean {
+            return oldItem == newItem
+        }
+
+        override fun areContentsTheSame(oldItem: DayModel, newItem: DayModel): Boolean {
+            return oldItem == newItem
+        }
 
     }
 
