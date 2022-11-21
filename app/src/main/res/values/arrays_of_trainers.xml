@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <string-array name="exersize">
+       <item>Barbell press on biceps|x5|barbell press on biceps.gif</item> <!--exersize - 0-->
+        <item>Bending one arm while sitting|x15|bending one arm while sitting.gif</item> <!--exersize - 1-->
+        <item>Extension of the upper block|x25|extension of the upper block.gif</item> <!--exersize - 2-->
+        <item>Flexion lying on the simulator lying biceps hips|x10|Flexion lying on the simulator lying biceps hips.jpeg</item> <!--exersize - 3-->
+        <item>Gym ganteley to sit|x25|gym ganteley sidya.gif</item> <!--exersize - 4-->
+        <item>Hammers with dumbbells|x25|hammers with dumbbells.gif</item> <!--exersize - 5-->
+        <item>Information in the crossover lying on an inclined bench|x15|information in the crossover lying on an inclined bench.gif</item> <!--exersize - 6-->
+        <item>Gym-legs|x5|jym-nogamy.gif</item> <!--exersize - 7-->
+        <item>Lifting dumbbells|x17|lifting dumbbells.gif</item> <!--exersize - 8-->
+        <item>Lifting the barbell on the biceps|x15|lifting the barbell on the biceps.gif</item> <!--exersize - 9-->
+        <item>Pull - ups|x10|pull - ups.gif</item> <!--exersize - 10-->
+        <item>Sitting-sgibanyagif|x15|sidya-sgibanyagif.gif</item> <!--exersize - 11-->
+        <item>Squats|x25|squats.gif</item> <!--exersize - 12-->
+        <item>Triceps extensions|x10|triceps extensions.gif</item> <!--exersize - 13-->
+        <item>Twisting|x20|twisting.gif</item> <!--exersize - 14-->
+        <item>Gym ganteley|x5|zim-gantelej.gif</item> <!--exersize - 15-->
+    </string-array>
 </resources>
