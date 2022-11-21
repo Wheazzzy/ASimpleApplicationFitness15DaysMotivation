@@ -16,13 +16,11 @@ class SplashActivity : AppCompatActivity() {
 
         timer = object : CountDownTimer(2000,1000){
             override fun onTick(p0: Long) {
-
             }
 
             override fun onFinish() {
                 startActivity(Intent(this@SplashActivity, MainActivity::class.java))
             }
-
         }.start()
     }
 
