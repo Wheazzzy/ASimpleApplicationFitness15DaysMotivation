@@ -1,6 +1,8 @@
 package com.example.fitnessapplication.Adapters
 
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fitnessapplication.R
@@ -16,6 +18,15 @@ class DayAdapter: ListAdapter<DayModel, DayAdapter.DayHolder> {
             val exercisesCounter = day.exercises.split(",").size.toString()
             counters.text = exercisesCounter
         }
+
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DayHolder {
+        val view = LayoutInflater.from(parent. context).inflate(R.layout.days_list_item, parent, false)
+        return DayHolder(view)
+    }
+
+    override fun onBindViewHolder(holder: DayHolder, position: Int) {
 
     }
 
