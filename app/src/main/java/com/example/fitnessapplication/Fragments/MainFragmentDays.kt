@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.fitnessapplication.Adapters.DayModel
 import com.example.fitnessapplication.R
 import com.example.fitnessapplication.databinding.FragmentMainDaysBinding
 
@@ -19,8 +20,15 @@ class MainFragmentDays : Fragment() {
         return binding.root
     }
 
-    companion object {
+    private fun fillDaysArray(): ArrayList<DayModel>{
+        val tempArray = ArrayList<DayModel>()
+        resources.getStringArray(R.array.exersize_days).forEach {
+            tempArray.add(DayModel(it, false))
+        }
+        return tempArray
+    }
 
+    companion object {
         @JvmStatic
         fun newInstance()  = MainFragmentDays()
 
