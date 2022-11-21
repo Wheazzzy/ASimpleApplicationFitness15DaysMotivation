@@ -6,16 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.fitnessapplication.R
+import com.example.fitnessapplication.databinding.FragmentMainDaysBinding
 
 
 class MainFragmentDays : Fragment() {
-
+    private lateinit var binding: FragmentMainDaysBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?): View? {
-
-        return inflater.inflate(R.layout.fragment_main_days, container, false)
+        savedInstanceState: Bundle?): View {
+        binding = FragmentMainDaysBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     companion object {
