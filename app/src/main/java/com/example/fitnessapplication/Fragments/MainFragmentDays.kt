@@ -6,10 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fitnessapplication.Adapters.DayAdapter
 import com.example.fitnessapplication.Adapters.DayModel
 import com.example.fitnessapplication.R
+import com.example.fitnessapplication.databinding.ExercisesListFragmentBinding
 import com.example.fitnessapplication.databinding.FragmentMainDaysBinding
 
 
@@ -29,7 +31,7 @@ class MainFragmentDays: Fragment(), DayAdapter.Listener {
     }
 
     private fun initializationRecyclerView() = with(binding){
-        var adapter = DayAdapter()
+        var adapter = DayAdapter(this@MainFragmentDays)
         recyclerViewDays.layoutManager = LinearLayoutManager(activity as AppCompatActivity)
         recyclerViewDays.adapter = adapter
         adapter.submitList(fillDaysArray())
@@ -50,6 +52,6 @@ class MainFragmentDays: Fragment(), DayAdapter.Listener {
     }
 
     override fun onClick(days: DayModel) {
-        TODO("Not yet implemented")
+       com.example.fitnessapplication.Utils.FragmentManager.setFragment(MainFragmentExerciseList.newInstance(), activity as AppCompatActivity)
     }
 }
