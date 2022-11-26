@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="1dp"
+    android:background="#43FFFFFF"
     android:elevation="@dimen/cardview_default_radius"
     tools:context=".Fragments.MainFragmentDays">
 
@@ -83,7 +84,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-condensed-medium"
-                android:text="How may days left? 20 days"
+                android:text="How many days left? 30 days"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toTopOf="@+id/progressBar2"
                 app:layout_constraintEnd_toEndOf="@+id/progressBar2"
