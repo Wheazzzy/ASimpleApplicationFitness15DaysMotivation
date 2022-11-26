@@ -11,7 +11,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         FragmentManager.setFragment(MainFragmentDays.newInstance(),this)
+
+    }
+
+    override fun onBackPressed() {
+        if(FragmentManager.currentFragment is MainFragmentDays) super.onBackPressed()
+        else FragmentManager.setFragment(MainFragmentDays.newInstance(), this)
+
     }
 }
