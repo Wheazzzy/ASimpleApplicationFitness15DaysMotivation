@@ -9,15 +9,18 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.fitnessapplication.R
 import com.example.fitnessapplication.databinding.DaysListItemBinding
 
-class DayAdapter: ListAdapter<DayModel, DayAdapter.DayHolder>(MyComparator()) {
+class DayAdapter(var listener: Listener): ListAdapter<DayModel, DayAdapter.DayHolder>(MyComparator()) {
 
     class DayHolder(view: View): RecyclerView.ViewHolder(view){
         private val binding = DaysListItemBinding.bind(view)
-        fun settingData(day: DayModel) = with(binding){
+        fun settingData(day: DayModel,  listener: Listener) = with(binding){
             val name = root.context.getString(R.string.day) + " ${adapterPosition + 1}"
             names.text = name
             val exercisesCounter = day.exercises.split(",").size.toString() + " " + root.context.getString(R.string.exercises)
             counters.text = exercisesCounter
+            itemView.setOnClickListener{
+                listener.onClick(day)
+            }
         }
 
     }
@@ -28,7 +31,7 @@ class DayAdapter: ListAdapter<DayModel, DayAdapter.DayHolder>(MyComparator()) {
     }
 
     override fun onBindViewHolder(holder: DayHolder, position: Int) {
-        holder.settingData(getItem(position))
+        holder.settingData(getItem(position), listener)
     }
 
     class MyComparator: DiffUtil.ItemCallback<DayModel>(){
@@ -45,6 +48,7 @@ class DayAdapter: ListAdapter<DayModel, DayAdapter.DayHolder>(MyComparator()) {
 
     interface Listener{
         fun onClick(days: DayModel)
+
     }
 
 }

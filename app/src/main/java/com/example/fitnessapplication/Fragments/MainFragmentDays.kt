@@ -13,7 +13,7 @@ import com.example.fitnessapplication.R
 import com.example.fitnessapplication.databinding.FragmentMainDaysBinding
 
 
-class MainFragmentDays: Fragment() {
+class MainFragmentDays: Fragment(), DayAdapter.Listener {
     private lateinit var binding: FragmentMainDaysBinding
 
     override fun onCreateView(
@@ -47,5 +47,9 @@ class MainFragmentDays: Fragment() {
         @JvmStatic
         fun newInstance()  = MainFragmentDays()
 
+    }
+
+    override fun onClick(days: DayModel) {
+        TODO("Not yet implemented")
     }
 }
