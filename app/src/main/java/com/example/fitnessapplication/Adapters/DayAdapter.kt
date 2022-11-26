@@ -43,4 +43,8 @@ class DayAdapter: ListAdapter<DayModel, DayAdapter.DayHolder>(MyComparator()) {
 
     }
 
+    interface Listener{
+        fun onClick(days: DayModel)
+    }
+
 }
