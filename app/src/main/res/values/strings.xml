@@ -6,4 +6,5 @@
     <string name="exercises">Exercises left!</string>
     <string name="waiting_message">Starting your exercise through:</string>
     <string name="starting_exercise">START!</string>
+    <string name="next">NEXT!</string>
 </resources>
