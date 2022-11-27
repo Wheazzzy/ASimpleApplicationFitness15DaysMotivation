@@ -62,7 +62,7 @@ class MainFragmentExercise: Fragment() {
 
     private fun setExerciseType(exercise: ExerciseModel){
         if(exercise.time.startsWith("x")){
-            binding.textViewNextName.text = exercise.time
+            binding.textViewTimeCount.text = exercise.time
         }else{
             startingTime(exercise)
         }
