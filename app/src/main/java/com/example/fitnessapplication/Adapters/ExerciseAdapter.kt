@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.fitnessapplication.R
 import com.example.fitnessapplication.databinding.DaysListItemBinding
 import com.example.fitnessapplication.databinding.ExerciseListItemBinding
+import pl.droidsonroids.gif.GifDrawable
 
 class ExerciseAdapter(): ListAdapter<ExerciseModel, ExerciseAdapter.ExerciseHolder>(MyComparator()) {
 
@@ -18,6 +19,7 @@ class ExerciseAdapter(): ListAdapter<ExerciseModel, ExerciseAdapter.ExerciseHold
         fun settingData(exercise: ExerciseModel) = with(binding) {
             textViewName.text = exercise.name
             textViewCounter.text = exercise.time
+            imageViewExercise.setImageDrawable(GifDrawable(root.context.assets, exercise.image))
         }
     }
 
