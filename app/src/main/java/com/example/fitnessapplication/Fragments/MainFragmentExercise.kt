@@ -39,12 +39,14 @@ class MainFragmentExercise: Fragment() {
     }
 
     private fun nextExercise(){
-        if(exerciseCounter){
+        if(exerciseCounter > exerciseList?.size!!){
 
         }else{
 
         }
     }
+
+
 
     companion object {
         @JvmStatic
