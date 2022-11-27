@@ -1,6 +1,7 @@
 package com.example.fitnessapplication.Fragments
 
 import android.os.Bundle
+import android.os.CountDownTimer
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,7 @@ import com.example.fitnessapplication.Adapters.ExerciseAdapter
 import com.example.fitnessapplication.Adapters.ExerciseModel
 import com.example.fitnessapplication.Utils.FragmentManager
 import com.example.fitnessapplication.Utils.MainViewModel
+import com.example.fitnessapplication.Utils.TimerUtils
 import com.example.fitnessapplication.databinding.ExerciseFragmentBinding
 import com.example.fitnessapplication.databinding.ExercisesListFragmentBinding
 import com.example.fitnessapplication.databinding.WaitingFragmentBinding
@@ -19,6 +21,7 @@ import pl.droidsonroids.gif.GifDrawable
 
 
 class MainFragmentExercise: Fragment() {
+    private var timer: CountDownTimer? = null
     private lateinit var binding: ExerciseFragmentBinding
     private val model: MainViewModel by activityViewModels()
     private var exerciseCounter = 0
@@ -46,6 +49,7 @@ class MainFragmentExercise: Fragment() {
         if(exerciseCounter < exerciseList?.size!!){
             val exersize = exerciseList?.get(exerciseCounter++)?: return
             showExercise(exersize)
+            setExerciseType(exersize)
         }else{
 
         }
@@ -57,7 +61,26 @@ class MainFragmentExercise: Fragment() {
     }
 
     private fun setExerciseType(exercise: ExerciseModel){
+        if(exercise.time.startsWith("x")){
+            binding.textViewNextName.text = exercise.time
+        }else{
 
+        }
+    }
+
+    private fun startingTime(ex: ExerciseModel) = with(binding){
+        progressBar3.max = ex.time.toInt() * 1000
+        timer = object: CountDownTimer(ex.time.toLong() * 1000, 1){
+            override fun onTick(resultTime: Long) {
+                textViewTimeCount.text = TimerUtils.getTime(resultTime)
+                progressBar3.progress = resultTime.toInt()
+            }
+
+            override fun onFinish() {
+                FragmentManager.setFragment(MainFragmentExercise.newInstance(), activity as AppCompatActivity)
+            }
+
+        }.start()
     }
 
     companion object {
