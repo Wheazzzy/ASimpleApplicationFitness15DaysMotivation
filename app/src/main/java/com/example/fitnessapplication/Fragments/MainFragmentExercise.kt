@@ -12,6 +12,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fitnessapplication.Adapters.ExerciseAdapter
 import com.example.fitnessapplication.Adapters.ExerciseModel
+import com.example.fitnessapplication.R
 import com.example.fitnessapplication.Utils.FragmentManager
 import com.example.fitnessapplication.Utils.MainViewModel
 import com.example.fitnessapplication.Utils.TimerUtils
@@ -76,7 +77,8 @@ class MainFragmentExercise: Fragment() {
             imageMainNext.setImageDrawable(GifDrawable(root.context.assets, exersize.image))
             textViewNextName.text = exersize.name
         }else{
-            Toast.makeText(activity, "DONE", Toast.LENGTH_LONG).show()
+            imageMainNext.setImageDrawable(GifDrawable(root.context.assets,"Congratulations.gif"))
+            textViewNextName.text = getString(R.string.done)
         }
     }
 
