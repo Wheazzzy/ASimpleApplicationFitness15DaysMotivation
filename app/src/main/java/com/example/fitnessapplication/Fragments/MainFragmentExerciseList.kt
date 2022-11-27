@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fitnessapplication.Adapters.ExerciseAdapter
 import com.example.fitnessapplication.Utils.MainViewModel
 import com.example.fitnessapplication.databinding.ExercisesListFragmentBinding
@@ -26,14 +27,16 @@ class MainFragmentExerciseList: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        initialization()
         model.mutableExerciseList.observe(viewLifecycleOwner){
-
+            adapter.submitList(it)
         }
     }
 
-    private fun init() = with(binding){
+    private fun initialization() = with(binding){
         adapter = ExerciseAdapter()
-
+        recyclerView.layoutManager = LinearLayoutManager(activity)
+        recyclerView.adapter = adapter
     }
 
     companion object {
