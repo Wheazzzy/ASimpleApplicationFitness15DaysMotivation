@@ -7,17 +7,20 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fitnessapplication.Adapters.DayAdapter
 import com.example.fitnessapplication.Adapters.DayModel
 import com.example.fitnessapplication.Adapters.ExerciseModel
 import com.example.fitnessapplication.R
+import com.example.fitnessapplication.Utils.MainViewModel
 import com.example.fitnessapplication.databinding.ExercisesListFragmentBinding
 import com.example.fitnessapplication.databinding.FragmentMainDaysBinding
 
 
 class MainFragmentDays: Fragment(), DayAdapter.Listener {
     private lateinit var binding: FragmentMainDaysBinding
+    private val model: MainViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -54,6 +57,7 @@ class MainFragmentDays: Fragment(), DayAdapter.Listener {
             val exerciseArrays = exercise.split("|")
             tempList.add(ExerciseModel(exerciseArrays[0], exerciseArrays[1], exerciseArrays[2]))
         }
+
     }
 
     companion object {

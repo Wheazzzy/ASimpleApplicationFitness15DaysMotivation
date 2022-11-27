@@ -1,4 +1,9 @@
 package com.example.fitnessapplication.Utils
 
-class MainViewModel {
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import com.example.fitnessapplication.Adapters.ExerciseModel
+
+class MainViewModel: ViewModel() {
+    val mutableExerciseList = MutableLiveData<ArrayList<ExerciseModel>>()
 }
