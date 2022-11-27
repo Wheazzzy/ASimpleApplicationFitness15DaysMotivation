@@ -10,20 +10,24 @@ import com.example.fitnessapplication.R
 import com.example.fitnessapplication.databinding.DaysListItemBinding
 import com.example.fitnessapplication.databinding.ExerciseListItemBinding
 
-class ExerciseAdapter(var listener: Listener): ListAdapter<ExerciseModel, ExerciseAdapter.ExerciseHolder>(MyComparator()) {
+class ExerciseAdapter(): ListAdapter<ExerciseModel, ExerciseAdapter.ExerciseHolder>(MyComparator()) {
 
-    class ExerciseHolder(view: View): RecyclerView.ViewHolder(view){
+    class ExerciseHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val binding = ExerciseListItemBinding.bind(view)
 
-        fun settingData(exercise: ExerciseModel) = with(binding){
+        fun settingData(exercise: ExerciseModel) = with(binding) {
             textViewName.text = exercise.name
             textViewCounter.text = exercise.time
 
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExerciseAdapter.ExerciseHolder {
-        val view = LayoutInflater.from(parent. context).inflate(R.layout.exercise_list_item, parent, false)
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): ExerciseAdapter.ExerciseHolder {
+        val view =
+            LayoutInflater.from(parent.context).inflate(R.layout.exercise_list_item, parent, false)
         return ExerciseAdapter.ExerciseHolder(view)
     }
 
@@ -31,7 +35,7 @@ class ExerciseAdapter(var listener: Listener): ListAdapter<ExerciseModel, Exerci
         holder.settingData(getItem(position))
     }
 
-    class MyComparator: DiffUtil.ItemCallback<ExerciseModel>(){
+    class MyComparator : DiffUtil.ItemCallback<ExerciseModel>() {
 
         override fun areItemsTheSame(oldItem: ExerciseModel, newItem: ExerciseModel): Boolean {
             return oldItem == newItem
@@ -40,11 +44,5 @@ class ExerciseAdapter(var listener: Listener): ListAdapter<ExerciseModel, Exerci
         override fun areContentsTheSame(oldItem: ExerciseModel, newItem: ExerciseModel): Boolean {
             return oldItem == newItem
         }
-
-    }
-
-    interface Listener{
-        fun onClick(days: DayModel)
-
     }
 }
