@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fitnessapplication.Adapters.ExerciseAdapter
+import com.example.fitnessapplication.Adapters.ExerciseModel
 import com.example.fitnessapplication.Utils.FragmentManager
 import com.example.fitnessapplication.Utils.MainViewModel
 import com.example.fitnessapplication.databinding.ExerciseFragmentBinding
@@ -18,10 +19,9 @@ import com.example.fitnessapplication.databinding.WaitingFragmentBinding
 
 class MainFragmentExercise: Fragment() {
     private lateinit var binding: ExerciseFragmentBinding
-
-
     private val model: MainViewModel by activityViewModels()
-
+    private var exerciseCounter = 0
+    private var exerciseList: ArrayList<ExerciseModel>? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,13 +33,17 @@ class MainFragmentExercise: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         model.mutableExerciseList.observe(viewLifecycleOwner){
-
+            exerciseList = it
         }
 
     }
 
     private fun nextExercise(){
+        if(exerciseCounter){
 
+        }else{
+
+        }
     }
 
     companion object {
