@@ -46,7 +46,9 @@ class MainFragmentExercise: Fragment() {
         }
     }
 
+    private fun showExercise() = with(binding){
 
+    }
 
     companion object {
         @JvmStatic
