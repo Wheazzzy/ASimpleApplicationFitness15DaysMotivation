@@ -5,4 +5,5 @@
     <string name="day">Days:</string>
     <string name="exercises">Exercises left!</string>
     <string name="waiting_message">Starting your exercise through:</string>
+    <string name="starting_exercise">START!</string>
 </resources>

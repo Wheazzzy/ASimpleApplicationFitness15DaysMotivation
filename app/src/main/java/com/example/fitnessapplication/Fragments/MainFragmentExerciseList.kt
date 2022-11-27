@@ -5,12 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fitnessapplication.Adapters.ExerciseAdapter
+import com.example.fitnessapplication.Utils.FragmentManager
 import com.example.fitnessapplication.Utils.MainViewModel
 import com.example.fitnessapplication.databinding.ExercisesListFragmentBinding
-
+import com.example.fitnessapplication.databinding.WaitingFragmentBinding
 
 
 class MainFragmentExerciseList: Fragment() {
@@ -39,6 +41,9 @@ class MainFragmentExerciseList: Fragment() {
         adapter = ExerciseAdapter()
         recyclerView.layoutManager = LinearLayoutManager(activity)
         recyclerView.adapter = adapter
+        buttonStart.setOnClickListener{
+            FragmentManager.setFragment(MainWaitingFragment.newInstance(), activity as AppCompatActivity)
+        }
     }
 
     companion object {

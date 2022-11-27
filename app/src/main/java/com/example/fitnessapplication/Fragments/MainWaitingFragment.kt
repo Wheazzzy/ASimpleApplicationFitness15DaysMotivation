@@ -6,10 +6,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.graphics.drawable.TintAwareDrawable
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fitnessapplication.Adapters.ExerciseAdapter
 import com.example.fitnessapplication.Utils.MainViewModel
+import com.example.fitnessapplication.Utils.TimerUtils
 import com.example.fitnessapplication.databinding.ExercisesListFragmentBinding
 import com.example.fitnessapplication.databinding.WaitingFragmentBinding
 
@@ -37,6 +39,7 @@ class MainWaitingFragment: Fragment() {
     private fun startingTime() = with(binding){
         timer = object: CountDownTimer(COUNT_DOWN_TIMER, 100){
             override fun onTick(resultTime: Long) {
+                textViewTimer.text = TimerUtils.getTime(resultTime)
                 progressBar.progress = resultTime.toInt()
             }
 
