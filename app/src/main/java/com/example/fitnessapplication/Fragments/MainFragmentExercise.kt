@@ -75,16 +75,21 @@ class MainFragmentExercise: Fragment() {
         if(exerciseCounter < exerciseList?.size!!){
             val exersize = exerciseList?.get(exerciseCounter)?: return
             imageMainNext.setImageDrawable(GifDrawable(root.context.assets, exersize.image))
-            val name = exersize.name + ": ${exersize.time}"
-            textViewNextName.text = exersize.name
+            getTimeType(exersize)
+           // textViewNextName.text = exersize.name
         }else{
             imageMainNext.setImageDrawable(GifDrawable(root.context.assets,"Congratulations.gif"))
             textViewNextName.text = getString(R.string.done)
         }
     }
 
-    private fun getTimeType(){
-
+    private fun getTimeType(exercise: ExerciseModel){
+        if(exercise.time.startsWith("x")){
+            binding.textViewName.text = exercise.time
+        }else{
+            val name = exercise.name + ": ${TimerUtils.getTime(exercise.time.toLong() * 1000)}"
+            binding.textViewNextName.text = name
+        }
     }
 
     private fun startingTime(ex: ExerciseModel) = with(binding){
