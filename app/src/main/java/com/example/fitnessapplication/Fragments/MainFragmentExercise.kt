@@ -15,6 +15,7 @@ import com.example.fitnessapplication.Utils.MainViewModel
 import com.example.fitnessapplication.databinding.ExerciseFragmentBinding
 import com.example.fitnessapplication.databinding.ExercisesListFragmentBinding
 import com.example.fitnessapplication.databinding.WaitingFragmentBinding
+import pl.droidsonroids.gif.GifDrawable
 
 
 class MainFragmentExercise: Fragment() {
@@ -40,14 +41,17 @@ class MainFragmentExercise: Fragment() {
 
     private fun nextExercise(){
         if(exerciseCounter > exerciseList?.size!!){
-
+            val exersize = exerciseList?.get(exerciseCounter++)
+            showExercise(exersize)
         }else{
 
         }
     }
 
-    private fun showExercise() = with(binding){
-
+    private fun showExercise(exerciseModel: ExerciseModel?) = with(binding){
+        if(exerciseModel == null)
+            return@with
+        imageViewMain.setImageDrawable(GifDrawable(root.context.assets, exerciseModel.image))
     }
 
     companion object {
