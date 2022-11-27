@@ -57,7 +57,7 @@ class MainFragmentDays: Fragment(), DayAdapter.Listener {
             val exerciseArrays = exercise.split("|")
             tempList.add(ExerciseModel(exerciseArrays[0], exerciseArrays[1], exerciseArrays[2]))
         }
-
+        model.mutableExerciseList.value = tempList
     }
 
     companion object {
