@@ -64,7 +64,7 @@ class MainFragmentExercise: Fragment() {
         if(exercise.time.startsWith("x")){
             binding.textViewNextName.text = exercise.time
         }else{
-
+            startingTime(exercise)
         }
     }
 
@@ -77,10 +77,15 @@ class MainFragmentExercise: Fragment() {
             }
 
             override fun onFinish() {
-                FragmentManager.setFragment(MainFragmentExercise.newInstance(), activity as AppCompatActivity)
+                nextExercise()
             }
 
         }.start()
+    }
+
+    override fun onDetach() {
+        super.onDetach()
+        timer?.cancel()
     }
 
     companion object {
