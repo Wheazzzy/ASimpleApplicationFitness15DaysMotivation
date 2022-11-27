@@ -1,4 +1,3 @@
 package com.example.fitnessapplication.Adapters
 
-class ExerciseModel {
-}
+data class ExerciseModel (var name: String, var time: String, var image: String)

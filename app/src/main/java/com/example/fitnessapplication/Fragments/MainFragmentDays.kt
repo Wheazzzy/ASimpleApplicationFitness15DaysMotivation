@@ -45,6 +45,10 @@ class MainFragmentDays: Fragment(), DayAdapter.Listener {
         return tempArray
     }
 
+    private fun fillExerciseList(){
+
+    }
+
     companion object {
         @JvmStatic
         fun newInstance()  = MainFragmentDays()
