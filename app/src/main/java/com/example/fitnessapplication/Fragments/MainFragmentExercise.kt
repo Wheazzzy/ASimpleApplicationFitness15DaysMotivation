@@ -51,6 +51,7 @@ class MainFragmentExercise: Fragment() {
             val exersize = exerciseList?.get(exerciseCounter++)?: return
             showExercise(exersize)
             setExerciseType(exersize)
+            showNextExercise()
         }else{
             Toast.makeText(activity, "DONE", Toast.LENGTH_LONG).show()
         }
@@ -69,11 +70,11 @@ class MainFragmentExercise: Fragment() {
         }
     }
 
-    private fun showNextExercise(){
+    private fun showNextExercise() = with(binding){
         if(exerciseCounter < exerciseList?.size!!){
-            val exersize = exerciseList?.get(exerciseCounter++)?: return
-            showExercise(exersize)
-            setExerciseType(exersize)
+            val exersize = exerciseList?.get(exerciseCounter)?: return
+            imageMainNext.setImageDrawable(GifDrawable(root.context.assets, exersize.image))
+            textViewNextName.text = exersize.name
         }else{
             Toast.makeText(activity, "DONE", Toast.LENGTH_LONG).show()
         }
