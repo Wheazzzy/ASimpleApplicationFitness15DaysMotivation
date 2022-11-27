@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="exersize">
+    <string-array name="training_exercise">
        <item>Barbell press on biceps|x5|barbell press on biceps.gif</item> <!--exersize - 0-->
         <item>Bending one arm while sitting|x15|bending one arm while sitting.gif</item> <!--exersize - 1-->
         <item>Extension of the upper block|x25|extension of the upper block.gif</item> <!--exersize - 2-->
@@ -23,7 +23,7 @@
         <item>Pullover in the block|x15|Pullover in the block.gif</item><!--19-->
     </string-array>
 
-    <string-array name="exersize_days">
+    <string-array name="exercise_days">
      <item>0,16,4,16,5,16,6,16,15,16,0,17,4,17,5,17,6,17,15,17</item> <!--Day - 1 -->
      <item>2,16,10,16,12,16,13,16,14,16,2,17,10,17,12,17,13,17,14,17</item> <!-- Day - 2 -->
      <item>7,16,11,16,3,16,5,16,4,16,7,17,11,17,3,17,5,17,4,17</item> <!--Day - 3 -->
