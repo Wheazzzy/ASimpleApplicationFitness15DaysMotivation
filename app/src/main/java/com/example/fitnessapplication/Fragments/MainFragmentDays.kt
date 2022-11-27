@@ -63,10 +63,10 @@ class MainFragmentDays: Fragment(), DayAdapter.Listener {
     companion object {
         @JvmStatic
         fun newInstance()  = MainFragmentDays()
-
     }
 
     override fun onClick(days: DayModel) {
+        fillExerciseList(days)
        com.example.fitnessapplication.Utils.FragmentManager.setFragment(MainFragmentExerciseList.newInstance(), activity as AppCompatActivity)
     }
 }

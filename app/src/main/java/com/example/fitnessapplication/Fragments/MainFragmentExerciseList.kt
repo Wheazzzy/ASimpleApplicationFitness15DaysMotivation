@@ -10,13 +10,15 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fitnessapplication.Adapters.ExerciseAdapter
 import com.example.fitnessapplication.Utils.MainViewModel
 import com.example.fitnessapplication.databinding.ExercisesListFragmentBinding
-import com.example.fitnessapplication.databinding.FragmentMainDaysBinding
+
 
 
 class MainFragmentExerciseList: Fragment() {
     private lateinit var binding: ExercisesListFragmentBinding
-    private val model: MainViewModel by activityViewModels()
     private lateinit var adapter: ExerciseAdapter
+
+    private val model: MainViewModel by activityViewModels()
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,10 +29,10 @@ class MainFragmentExerciseList: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initialization()
         model.mutableExerciseList.observe(viewLifecycleOwner){
             adapter.submitList(it)
         }
+        initialization()
     }
 
     private fun initialization() = with(binding){

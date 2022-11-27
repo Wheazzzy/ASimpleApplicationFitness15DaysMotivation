@@ -12,26 +12,22 @@ import com.example.fitnessapplication.databinding.ExerciseListItemBinding
 
 class ExerciseAdapter(): ListAdapter<ExerciseModel, ExerciseAdapter.ExerciseHolder>(MyComparator()) {
 
-    class ExerciseHolder(view: View) : RecyclerView.ViewHolder(view) {
+    class ExerciseHolder(view: View): RecyclerView.ViewHolder(view) {
         private val binding = ExerciseListItemBinding.bind(view)
 
         fun settingData(exercise: ExerciseModel) = with(binding) {
             textViewName.text = exercise.name
             textViewCounter.text = exercise.time
-
         }
     }
 
-    override fun onCreateViewHolder(
-        parent: ViewGroup,
-        viewType: Int
-    ): ExerciseAdapter.ExerciseHolder {
-        val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.exercise_list_item, parent, false)
-        return ExerciseAdapter.ExerciseHolder(view)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExerciseHolder {
+        val view = LayoutInflater.from(parent.context).
+        inflate(R.layout.exercise_list_item, parent, false)
+        return ExerciseHolder(view)
     }
 
-    override fun onBindViewHolder(holder: ExerciseAdapter.ExerciseHolder, position: Int) {
+    override fun onBindViewHolder(holder: ExerciseHolder, position: Int) {
         holder.settingData(getItem(position))
     }
 
