@@ -38,7 +38,9 @@ class MainFragmentExercise: Fragment() {
 
     }
 
+    private fun nextExercise(){
 
+    }
 
     companion object {
         @JvmStatic
