@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -51,7 +52,7 @@ class MainFragmentExercise: Fragment() {
             showExercise(exersize)
             setExerciseType(exersize)
         }else{
-
+            Toast.makeText(activity, "DONE", Toast.LENGTH_LONG).show()
         }
     }
 
@@ -68,8 +69,19 @@ class MainFragmentExercise: Fragment() {
         }
     }
 
+    private fun showNextExercise(){
+        if(exerciseCounter < exerciseList?.size!!){
+            val exersize = exerciseList?.get(exerciseCounter++)?: return
+            showExercise(exersize)
+            setExerciseType(exersize)
+        }else{
+            Toast.makeText(activity, "DONE", Toast.LENGTH_LONG).show()
+        }
+    }
+
     private fun startingTime(ex: ExerciseModel) = with(binding){
         progressBar3.max = ex.time.toInt() * 1000
+        timer?.cancel()
         timer = object: CountDownTimer(ex.time.toLong() * 1000, 1){
             override fun onTick(resultTime: Long) {
                 textViewTimeCount.text = TimerUtils.getTime(resultTime)
