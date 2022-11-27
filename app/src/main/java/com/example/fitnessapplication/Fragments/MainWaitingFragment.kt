@@ -7,13 +7,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.graphics.drawable.TintAwareDrawable
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.setFragmentResult
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fitnessapplication.Adapters.ExerciseAdapter
+import com.example.fitnessapplication.Utils.FragmentManager
 import com.example.fitnessapplication.Utils.MainViewModel
 import com.example.fitnessapplication.Utils.TimerUtils
+import com.example.fitnessapplication.databinding.ExerciseFragmentBinding
 import com.example.fitnessapplication.databinding.ExercisesListFragmentBinding
 import com.example.fitnessapplication.databinding.WaitingFragmentBinding
 
@@ -46,7 +49,7 @@ class MainWaitingFragment: Fragment() {
             }
 
             override fun onFinish() {
-                Toast.makeText(activity, "DONE", Toast.LENGTH_LONG ).show()
+                FragmentManager.setFragment(MainFragmentExercise.newInstance(), activity as AppCompatActivity)
             }
 
         }.start()
