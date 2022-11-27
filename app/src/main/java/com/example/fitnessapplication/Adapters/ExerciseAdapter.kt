@@ -8,39 +8,36 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fitnessapplication.R
 import com.example.fitnessapplication.databinding.DaysListItemBinding
+import com.example.fitnessapplication.databinding.ExerciseListItemBinding
 
-class ExerciseAdapter(var listener: Listener): ListAdapter<DayModel, ExerciseAdapter.DayHolder>(MyComparator()) {
+class ExerciseAdapter(var listener: Listener): ListAdapter<ExerciseModel, ExerciseAdapter.ExerciseHolder>(MyComparator()) {
 
-    class DayHolder(view: View): RecyclerView.ViewHolder(view){
-        private val binding = DaysListItemBinding.bind(view)
-        fun settingData(day: DayModel,  listener: Listener) = with(binding){
-            val name = root.context.getString(R.string.day) + " ${adapterPosition + 1}"
-            names.text = name
-            val exercisesCounter = day.exercises.split(",").size.toString() + " " + root.context.getString(R.string.exercises)
-            counters.text = exercisesCounter
-            itemView.setOnClickListener{
-                listener.onClick(day)
-            }
+    class ExerciseHolder(view: View): RecyclerView.ViewHolder(view){
+        private val binding = ExerciseListItemBinding.bind(view)
+
+        fun settingData(exercise: ExerciseModel) = with(binding){
+            textViewName.text = exercise.name
+            textViewCounter.text = exercise.time
+
         }
-
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DayHolder {
-        val view = LayoutInflater.from(parent. context).inflate(R.layout.days_list_item, parent, false)
-        return DayHolder(view)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExerciseAdapter.ExerciseHolder {
+        val view = LayoutInflater.from(parent. context).inflate(R.layout.exercise_list_item, parent, false)
+        return ExerciseAdapter.ExerciseHolder(view)
     }
 
-    override fun onBindViewHolder(holder: DayHolder, position: Int) {
-        holder.settingData(getItem(position), listener)
+    override fun onBindViewHolder(holder: ExerciseAdapter.ExerciseHolder, position: Int) {
+        holder.settingData(getItem(position))
     }
 
-    class MyComparator: DiffUtil.ItemCallback<DayModel>(){
+    class MyComparator: DiffUtil.ItemCallback<ExerciseModel>(){
 
-        override fun areItemsTheSame(oldItem: DayModel, newItem: DayModel): Boolean {
+        override fun areItemsTheSame(oldItem: ExerciseModel, newItem: ExerciseModel): Boolean {
             return oldItem == newItem
         }
 
-        override fun areContentsTheSame(oldItem: DayModel, newItem: DayModel): Boolean {
+        override fun areContentsTheSame(oldItem: ExerciseModel, newItem: ExerciseModel): Boolean {
             return oldItem == newItem
         }
 
@@ -50,5 +47,4 @@ class ExerciseAdapter(var listener: Listener): ListAdapter<DayModel, ExerciseAda
         fun onClick(days: DayModel)
 
     }
-
 }
