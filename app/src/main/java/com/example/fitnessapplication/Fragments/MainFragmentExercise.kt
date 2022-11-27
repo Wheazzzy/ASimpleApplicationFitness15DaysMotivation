@@ -35,23 +35,29 @@ class MainFragmentExercise: Fragment() {
         super.onViewCreated(view, savedInstanceState)
         model.mutableExerciseList.observe(viewLifecycleOwner){
             exerciseList = it
+            nextExercise()
         }
-
+            binding.buttonNext.setOnClickListener{
+                nextExercise()
+            }
     }
 
     private fun nextExercise(){
-        if(exerciseCounter > exerciseList?.size!!){
-            val exersize = exerciseList?.get(exerciseCounter++)
+        if(exerciseCounter < exerciseList?.size!!){
+            val exersize = exerciseList?.get(exerciseCounter++)?: return
             showExercise(exersize)
         }else{
 
         }
     }
 
-    private fun showExercise(exerciseModel: ExerciseModel?) = with(binding){
-        if(exerciseModel == null)
-            return@with
+    private fun showExercise(exerciseModel: ExerciseModel) = with(binding){
         imageViewMain.setImageDrawable(GifDrawable(root.context.assets, exerciseModel.image))
+        textViewName.text = exerciseModel.name
+    }
+
+    private fun setExerciseType(exercise: ExerciseModel){
+
     }
 
     companion object {
