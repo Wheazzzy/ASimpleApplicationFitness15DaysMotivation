@@ -42,9 +42,9 @@ class MainFragmentExercise: Fragment() {
             exerciseList = it
             nextExercise()
         }
-            binding.buttonNext.setOnClickListener{
-                nextExercise()
-            }
+        binding.buttonNext.setOnClickListener{
+            nextExercise()
+        }
     }
 
     private fun nextExercise(){
@@ -76,7 +76,7 @@ class MainFragmentExercise: Fragment() {
             val exersize = exerciseList?.get(exerciseCounter)?: return
             imageMainNext.setImageDrawable(GifDrawable(root.context.assets, exersize.image))
             setTimeType(exersize)
-           //textViewNextName.text = exersize.name
+            textViewNextName.text = exersize.name
         }else{
             imageMainNext.setImageDrawable(GifDrawable(root.context.assets,"Congratulations.gif"))
             textViewNextName.text = getString(R.string.done)
@@ -93,13 +93,13 @@ class MainFragmentExercise: Fragment() {
     }
 
     private fun startingTime(ex: ExerciseModel) = with(binding){
-        progressBar3.max = ex.time.toInt() * 1000
+        progressBarMain.max = ex.time.toInt() * 1000
         timer?.cancel()
         timer = object: CountDownTimer(ex.time.toLong() * 1000, 1){
 
             override fun onTick(resultTime: Long) {
                 textViewTimeCount.text = TimerUtils.getTime(resultTime)
-                progressBar3.progress = resultTime.toInt()
+                progressBarMain.progress = resultTime.toInt()
             }
 
             override fun onFinish() {
