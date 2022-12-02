@@ -6,20 +6,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.activityViewModels
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.fitnessapplication.Adapters.ExerciseAdapter
 import com.example.fitnessapplication.Adapters.ExerciseModel
 import com.example.fitnessapplication.R
 import com.example.fitnessapplication.Utils.FragmentManager
 import com.example.fitnessapplication.Utils.MainViewModel
 import com.example.fitnessapplication.Utils.TimerUtils
 import com.example.fitnessapplication.databinding.ExerciseFragmentBinding
-import com.example.fitnessapplication.databinding.ExercisesListFragmentBinding
-import com.example.fitnessapplication.databinding.WaitingFragmentBinding
 import pl.droidsonroids.gif.GifDrawable
 
 
@@ -41,6 +36,8 @@ class MainFragmentExercise : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+//        Log.d("MyLog", "Counter ${model.getPreferences(model.currentDay.toString())}")
+        exerciseCounter = model.getExerciseCounter(model.currentDay.toString())
         actionBar = (activity as AppCompatActivity).supportActionBar
         model.mutableExerciseList.observe(viewLifecycleOwner) {
             exerciseList = it
@@ -120,7 +117,7 @@ class MainFragmentExercise : Fragment() {
 
     override fun onDetach() {
         super.onDetach()
-        model.savePreferences(model.currentDay.toString(), exerciseCounter)
+        model.savePreferences(model.currentDay.toString(), exerciseCounter - 1)
         timer?.cancel()
     }
 

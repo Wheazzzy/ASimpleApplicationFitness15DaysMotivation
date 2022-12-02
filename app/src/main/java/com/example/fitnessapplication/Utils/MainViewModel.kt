@@ -14,7 +14,7 @@ class MainViewModel: ViewModel() {
         preferences?.edit()?.putInt(key, exerciseCounter)?.apply()
     }
 
-    fun getPreferences(key: String): Int{
+    fun getExerciseCounter(key: String): Int{
         return  preferences?.getInt(key, 0) ?: 0
     }
 }
