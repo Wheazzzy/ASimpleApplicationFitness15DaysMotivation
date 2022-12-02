@@ -64,6 +64,8 @@ class MainFragmentExercise: Fragment() {
     private fun showExercise(exerciseModel: ExerciseModel) = with(binding){
         imageViewMain.setImageDrawable(GifDrawable(root.context.assets, exerciseModel.image))
         textViewName.text = exerciseModel.name
+        val title = "$exerciseCounter / ${exerciseList?.size}"
+        actionBar?.title = title
     }
 
     private fun setExerciseType(exercise: ExerciseModel){

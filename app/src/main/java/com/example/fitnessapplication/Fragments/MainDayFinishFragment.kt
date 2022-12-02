@@ -1,32 +1,21 @@
 package com.example.fitnessapplication.Fragments
 
 import android.os.Bundle
-import android.os.CountDownTimer
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.graphics.drawable.TintAwareDrawable
-import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.setFragmentResult
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.fitnessapplication.Adapters.ExerciseAdapter
+import androidx.fragment.app.Fragment
+import com.example.fitnessapplication.R
 import com.example.fitnessapplication.Utils.FragmentManager
-import com.example.fitnessapplication.Utils.MainViewModel
-import com.example.fitnessapplication.Utils.TimerUtils
 import com.example.fitnessapplication.databinding.DayFinishFragmentBinding
-import com.example.fitnessapplication.databinding.ExerciseFragmentBinding
-import com.example.fitnessapplication.databinding.ExercisesListFragmentBinding
-import com.example.fitnessapplication.databinding.WaitingFragmentBinding
 import pl.droidsonroids.gif.GifDrawable
 
 
 class MainDayFinishFragment: Fragment() {
     private lateinit var binding: DayFinishFragmentBinding
-
-
+    private var actionBar: ActionBar? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,6 +26,8 @@ class MainDayFinishFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        actionBar = (activity as AppCompatActivity).supportActionBar
+        actionBar?.title = getString(R.string.done)
         binding.imageViewMain.setImageDrawable(GifDrawable((activity as AppCompatActivity).assets,"Congratulations.gif"))
         binding.buttonDone.setOnClickListener{
             FragmentManager.setFragment(MainFragmentDays.newInstance(), activity as AppCompatActivity)
