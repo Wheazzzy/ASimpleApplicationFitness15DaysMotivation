@@ -20,8 +20,7 @@ import com.example.fitnessapplication.databinding.DayFinishFragmentBinding
 import com.example.fitnessapplication.databinding.ExerciseFragmentBinding
 import com.example.fitnessapplication.databinding.ExercisesListFragmentBinding
 import com.example.fitnessapplication.databinding.WaitingFragmentBinding
-
-
+import pl.droidsonroids.gif.GifDrawable
 
 
 class MainDayFinishFragment: Fragment() {
@@ -38,7 +37,10 @@ class MainDayFinishFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        binding.imageViewMain.setImageDrawable(GifDrawable((activity as AppCompatActivity).assets,"Congratulations.gif"))
+        binding.buttonDone.setOnClickListener{
+            FragmentManager.setFragment(MainFragmentDays.newInstance(), activity as AppCompatActivity)
+        }
     }
 
 
