@@ -37,6 +37,9 @@ class MainFragmentExerciseList : Fragment() {
         actionBar = (activity as AppCompatActivity).supportActionBar
         actionBar?.title = getString(R.string.exercise)
         model.mutableExerciseList.observe(viewLifecycleOwner) {
+            for(i in 0 until model.getExerciseCounter()){
+                it[i] = it[i].copy(isDone = true)
+            }
             adapter.submitList(it)
         }
         initialization()

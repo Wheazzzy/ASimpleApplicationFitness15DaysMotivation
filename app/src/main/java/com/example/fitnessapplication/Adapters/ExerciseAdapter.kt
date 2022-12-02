@@ -19,6 +19,7 @@ class ExerciseAdapter(): ListAdapter<ExerciseModel, ExerciseAdapter.ExerciseHold
         fun settingData(exercise: ExerciseModel) = with(binding) {
             textViewName.text = exercise.name
             textViewCounter.text = exercise.time
+            checkBox.isChecked = exercise.isDone
             imageViewExercise.setImageDrawable(GifDrawable(root.context.assets, exercise.image))
         }
     }

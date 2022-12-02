@@ -37,7 +37,7 @@ class MainFragmentExercise : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 //        Log.d("MyLog", "Counter ${model.getPreferences(model.currentDay.toString())}")
-        exerciseCounter = model.getExerciseCounter(model.currentDay.toString())
+        exerciseCounter = model.getExerciseCounter()
         actionBar = (activity as AppCompatActivity).supportActionBar
         model.mutableExerciseList.observe(viewLifecycleOwner) {
             exerciseList = it
