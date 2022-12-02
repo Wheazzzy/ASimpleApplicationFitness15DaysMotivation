@@ -21,9 +21,9 @@ import com.example.fitnessapplication.databinding.ExercisesListFragmentBinding
 import com.example.fitnessapplication.databinding.WaitingFragmentBinding
 
 
-const val COUNT_DOWN_TIMER = 11000L
 
-class MainWaitingFragment: Fragment() {
+
+class MainDayFinishFragment: Fragment() {
     private lateinit var binding: WaitingFragmentBinding
 
 
@@ -37,32 +37,13 @@ class MainWaitingFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.progressBar.max = COUNT_DOWN_TIMER.toInt()
-        startingTime()
+
     }
 
-    private fun startingTime() = with(binding){
-        timer = object: CountDownTimer(COUNT_DOWN_TIMER, 1){
-            override fun onTick(resultTime: Long) {
-                textViewTimer.text = TimerUtils.getTime(resultTime)
-                progressBar.progress = resultTime.toInt()
-            }
-
-            override fun onFinish() {
-                FragmentManager.setFragment(MainFragmentExercise.newInstance(), activity as AppCompatActivity)
-            }
-
-        }.start()
-    }
-
-    override fun onDetach() {
-        super.onDetach()
-        timer.cancel()
-    }
 
     companion object {
         @JvmStatic
-        fun newInstance()  = MainWaitingFragment()
+        fun newInstance()  = MainDayFinishFragment()
 
     }
 }
