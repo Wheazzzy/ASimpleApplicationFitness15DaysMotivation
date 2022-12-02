@@ -7,9 +7,13 @@ import com.example.fitnessapplication.Adapters.ExerciseModel
 
 class MainViewModel: ViewModel() {
     val mutableExerciseList = MutableLiveData<ArrayList<ExerciseModel>>()
-    val preferences: SharedPreferences? = null
+    var preferences: SharedPreferences? = null
 
     fun savePreferences(key: String, exerciseCounter: Int){
         preferences?.edit()?.putInt(key, exerciseCounter)?.apply()
+    }
+
+    fun getPreferences(key: String): Int{
+        return  preferences?.getInt(key, 0) ?: 0
     }
 }
