@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -28,6 +29,7 @@ class MainFragmentExercise: Fragment() {
     private val model: MainViewModel by activityViewModels()
     private var exerciseCounter = 0
     private var exerciseList: ArrayList<ExerciseModel>? = null
+    private var actionBar: ActionBar? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,6 +40,7 @@ class MainFragmentExercise: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        actionBar = (activity as AppCompatActivity).supportActionBar
         model.mutableExerciseList.observe(viewLifecycleOwner){
             exerciseList = it
             nextExercise()
@@ -54,7 +57,7 @@ class MainFragmentExercise: Fragment() {
             setExerciseType(exersize)
             showNextExercise()
         }else{
-            Toast.makeText(activity, "DONE", Toast.LENGTH_LONG).show()
+            FragmentManager.setFragment(MainDayFinishFragment.newInstance(), activity as AppCompatActivity)
         }
     }
 
