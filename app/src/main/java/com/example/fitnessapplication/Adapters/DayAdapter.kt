@@ -13,6 +13,7 @@ class DayAdapter(var listener: Listener): ListAdapter<DayModel, DayAdapter.DayHo
 
     class DayHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val binding = DaysListItemBinding.bind(view)
+
         fun settingData(day: DayModel, listener: Listener) = with(binding) {
             val name = root.context.getString(R.string.day) + " ${adapterPosition + 1}"
             names.text = name
@@ -20,7 +21,7 @@ class DayAdapter(var listener: Listener): ListAdapter<DayModel, DayAdapter.DayHo
                 day.exercises.split(",").size.toString() + " " + root.context.getString(R.string.exercises)
             counters.text = exercisesCounter
             itemView.setOnClickListener {
-                listener.onClick(day)
+                listener.onClick(day.copy(dayNumber = adapterPosition + 1))
             }
         }
     }

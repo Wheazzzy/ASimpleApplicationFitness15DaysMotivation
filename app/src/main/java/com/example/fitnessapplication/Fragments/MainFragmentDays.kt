@@ -71,6 +71,7 @@ class MainFragmentDays: Fragment(), DayAdapter.Listener {
 
     override fun onClick(days: DayModel) {
         fillExerciseList(days)
+        model.currentDay = days.dayNumber
        com.example.fitnessapplication.Utils.FragmentManager.setFragment(MainFragmentExerciseList.newInstance(), activity as AppCompatActivity)
     }
 }
