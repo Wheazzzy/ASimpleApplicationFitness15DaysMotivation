@@ -16,6 +16,7 @@ import com.example.fitnessapplication.Adapters.ExerciseAdapter
 import com.example.fitnessapplication.Utils.FragmentManager
 import com.example.fitnessapplication.Utils.MainViewModel
 import com.example.fitnessapplication.Utils.TimerUtils
+import com.example.fitnessapplication.databinding.DayFinishFragmentBinding
 import com.example.fitnessapplication.databinding.ExerciseFragmentBinding
 import com.example.fitnessapplication.databinding.ExercisesListFragmentBinding
 import com.example.fitnessapplication.databinding.WaitingFragmentBinding
@@ -24,14 +25,14 @@ import com.example.fitnessapplication.databinding.WaitingFragmentBinding
 
 
 class MainDayFinishFragment: Fragment() {
-    private lateinit var binding: WaitingFragmentBinding
+    private lateinit var binding: DayFinishFragmentBinding
 
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?): View {
-        binding = WaitingFragmentBinding.inflate(inflater, container, false)
+        binding = DayFinishFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
 
