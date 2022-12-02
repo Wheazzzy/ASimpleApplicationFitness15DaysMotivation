@@ -39,7 +39,7 @@ class MainFragmentDays: Fragment(), DayAdapter.Listener {
     private fun initializationRecyclerView() = with(binding){
         val adapter = DayAdapter(this@MainFragmentDays)
         actionBar = (activity as AppCompatActivity).supportActionBar
-        actionBar?.title = getString(R.string.day)
+        actionBar?.title = getString(R.string.days)
         recyclerViewDays.layoutManager = LinearLayoutManager(activity as AppCompatActivity)
         recyclerViewDays.adapter = adapter
         adapter.submitList(fillDaysArray())
