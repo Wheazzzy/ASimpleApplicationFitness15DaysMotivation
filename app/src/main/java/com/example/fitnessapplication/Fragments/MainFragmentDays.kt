@@ -53,9 +53,13 @@ class MainFragmentDays: Fragment(), DayAdapter.Listener {
             val exerciseCounter = it.split(",").size
             tempArray.add(DayModel(it, 0,model.getExerciseCounter() == exerciseCounter))
         }
-
+        tempArray.forEach{
+            if(it.isDone) restDaysCounter++
+        }
         return tempArray
     }
+
+
 
     private fun fillExerciseList(days: DayModel){
         val tempList = ArrayList<ExerciseModel>()
