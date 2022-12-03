@@ -14,10 +14,11 @@ object DialogMenu {
             listener.onClick()
             dialog?.dismiss()
         }
-        builder.setPositiveButton(R.string.cancel) { _,_ ->
+        builder.setNegativeButton(R.string.cancel) { _,_ ->
             dialog?.dismiss()
         }
         dialog = builder.create()
+        dialog.show()
     }
 
     interface Listener {
