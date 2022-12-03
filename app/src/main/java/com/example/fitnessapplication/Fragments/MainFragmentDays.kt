@@ -32,6 +32,7 @@ class MainFragmentDays: Fragment(), DayAdapter.Listener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        model.currentDay = 0
         initializationRecyclerView()
     }
 
