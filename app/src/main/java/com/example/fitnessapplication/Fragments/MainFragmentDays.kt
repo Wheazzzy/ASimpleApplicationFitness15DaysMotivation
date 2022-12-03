@@ -59,7 +59,9 @@ class MainFragmentDays: Fragment(), DayAdapter.Listener {
         return tempArray
     }
 
+    private fun updateRestDaysUI(restDays: Int) = with(binding){
 
+    }
 
     private fun fillExerciseList(days: DayModel){
         val tempList = ArrayList<ExerciseModel>()

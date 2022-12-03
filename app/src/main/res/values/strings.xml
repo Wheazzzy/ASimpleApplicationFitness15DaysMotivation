@@ -11,4 +11,6 @@
     <string name="next">NEXT!</string>
     <string name="done">WELL DONE!</string>
     <string name="waiting">Waiting:</string>
+    <string name="rest">LEFT:</string>
+    <string name="rest_days">DAYS:</string>
 </resources>
