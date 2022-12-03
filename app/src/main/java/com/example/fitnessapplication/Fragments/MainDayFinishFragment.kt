@@ -13,13 +13,14 @@ import com.example.fitnessapplication.databinding.DayFinishFragmentBinding
 import pl.droidsonroids.gif.GifDrawable
 
 
-class MainDayFinishFragment: Fragment() {
+class MainDayFinishFragment : Fragment() {
     private lateinit var binding: DayFinishFragmentBinding
     private var actionBar: ActionBar? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?): View {
+        savedInstanceState: Bundle?
+    ): View {
         binding = DayFinishFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -28,16 +29,24 @@ class MainDayFinishFragment: Fragment() {
         super.onViewCreated(view, savedInstanceState)
         actionBar = (activity as AppCompatActivity).supportActionBar
         actionBar?.title = getString(R.string.done)
-        binding.imageViewMain.setImageDrawable(GifDrawable((activity as AppCompatActivity).assets,"Congratulations.gif"))
-        binding.buttonDone.setOnClickListener{
-            FragmentManager.setFragment(MainFragmentDays.newInstance(), activity as AppCompatActivity)
+        binding.imageViewMain.setImageDrawable(
+            GifDrawable(
+                (activity as AppCompatActivity).assets,
+                "Congratulations.gif"
+            )
+        )
+        binding.buttonDone.setOnClickListener {
+            FragmentManager.setFragment(
+                MainFragmentDays.newInstance(),
+                activity as AppCompatActivity
+            )
         }
     }
 
 
     companion object {
         @JvmStatic
-        fun newInstance()  = MainDayFinishFragment()
+        fun newInstance() = MainDayFinishFragment()
 
     }
 }

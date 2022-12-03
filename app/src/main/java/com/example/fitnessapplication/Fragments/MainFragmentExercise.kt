@@ -55,6 +55,7 @@ class MainFragmentExercise : Fragment() {
             setExerciseType(exersize)
             showNextExercise()
         } else {
+            exerciseCounter++
             FragmentManager.setFragment(
                 MainDayFinishFragment.newInstance(),
                 activity as AppCompatActivity
