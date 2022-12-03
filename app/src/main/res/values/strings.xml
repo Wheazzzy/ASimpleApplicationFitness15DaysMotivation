@@ -14,4 +14,6 @@
     <string name="rest">LEFT:</string>
     <string name="rest_days">DAYS:</string>
     <string name="reset">Resetting</string>
+    <string name="attention">Attention!!!</string>
+    <string name="cancel">CANCEL!!</string>
 </resources>
