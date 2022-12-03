@@ -11,6 +11,7 @@ import com.example.fitnessapplication.Adapters.DayAdapter
 import com.example.fitnessapplication.Adapters.DayModel
 import com.example.fitnessapplication.Adapters.ExerciseModel
 import com.example.fitnessapplication.R
+import com.example.fitnessapplication.Utils.DialogMenu
 import com.example.fitnessapplication.Utils.FragmentManager
 import com.example.fitnessapplication.Utils.MainViewModel
 import com.example.fitnessapplication.databinding.FragmentMainDaysBinding
@@ -46,8 +47,15 @@ class MainFragmentDays: Fragment(), DayAdapter.Listener {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(item.itemId == R.id.reset){
-            model.preferences?.edit()?.clear()?.apply()
-            adapter.submitList(fillDaysArray())
+            DialogMenu.showDialog(activity as AppCompatActivity, R.string.reset_days_message,
+                object: DialogMenu.Listener{
+                    override fun onClick() {
+                        model.preferences?.edit()?.clear()?.apply()
+                        adapter.submitList(fillDaysArray())
+                    }
+
+                })
+
         }
         return super.onOptionsItemSelected(item)
 

@@ -4,7 +4,7 @@ import android.app.AlertDialog
 import android.content.Context
 import com.example.fitnessapplication.R
 
-class DialogMenu {
+object DialogMenu {
     fun showDialog(context: Context, massageId: Int, listener: Listener){
         val builder = AlertDialog.Builder(context)
         var dialog: AlertDialog? = null
