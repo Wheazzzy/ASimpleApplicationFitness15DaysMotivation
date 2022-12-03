@@ -44,7 +44,9 @@ class MainFragmentDays: Fragment(), DayAdapter.Listener {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
+        if(item.itemId == R.id.reset){
+            model.preferences?.edit()?.clear()?.apply()
+        }
         return super.onOptionsItemSelected(item)
 
     }
