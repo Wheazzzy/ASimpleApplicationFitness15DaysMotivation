@@ -17,7 +17,7 @@ import com.example.fitnessapplication.Utils.MainViewModel
 import com.example.fitnessapplication.databinding.FragmentMainDaysBinding
 
 
-class MainFragmentDays: Fragment(), DayAdapter.Listener {
+class MainFragmentDays : Fragment(), DayAdapter.Listener {
     private lateinit var adapter: DayAdapter
     private lateinit var binding: FragmentMainDaysBinding
     private val model: MainViewModel by activityViewModels()
@@ -30,7 +30,8 @@ class MainFragmentDays: Fragment(), DayAdapter.Listener {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?): View {
+        savedInstanceState: Bundle?
+    ): View {
         binding = FragmentMainDaysBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -46,22 +47,21 @@ class MainFragmentDays: Fragment(), DayAdapter.Listener {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if(item.itemId == R.id.reset){
+        if (item.itemId == R.id.reset) {
             DialogMenu.showDialog(activity as AppCompatActivity, R.string.reset_days_message,
-                object: DialogMenu.Listener{
+                object : DialogMenu.Listener {
                     override fun onClick() {
                         model.preferences?.edit()?.clear()?.apply()
                         adapter.submitList(fillDaysArray())
                     }
 
-                })
-
+                }
+            )
         }
         return super.onOptionsItemSelected(item)
-
     }
 
-    private fun initializationRecyclerView() = with(binding){
+    private fun initializationRecyclerView() = with(binding) {
         adapter = DayAdapter(this@MainFragmentDays)
         actionBar = (activity as AppCompatActivity).supportActionBar
         actionBar?.title = getString(R.string.days)
@@ -70,47 +70,74 @@ class MainFragmentDays: Fragment(), DayAdapter.Listener {
         adapter.submitList(fillDaysArray())
     }
 
-    private fun fillDaysArray(): ArrayList<DayModel>{
+    private fun fillDaysArray(): ArrayList<DayModel> {
         val tempArray = ArrayList<DayModel>()
         var daysDoneCounter = 0
         resources.getStringArray(R.array.exercise_days).forEach {
             model.currentDay++
             val exerciseCounter = it.split(",").size
-            tempArray.add(DayModel(it, 0,model.getExerciseCounter() == exerciseCounter))
+            tempArray.add(DayModel(it, 0, model.getExerciseCounter() == exerciseCounter))
         }
         binding.progressBar2.max = tempArray.size
-        tempArray.forEach{
-            if(it.isDone) daysDoneCounter++
+        tempArray.forEach {
+            if (it.isDone) daysDoneCounter++
         }
         updateRestDaysUI(tempArray.size - daysDoneCounter, tempArray.size)
         return tempArray
     }
 
-    private fun updateRestDaysUI(restDays: Int, days: Int) = with(binding){
+    private fun updateRestDaysUI(restDays: Int, days: Int) = with(binding) {
         val rDays = getString(R.string.rest) + " $restDays " + getString(R.string.rest_days)
         textViewDays.text = rDays
         progressBar2.progress = days - restDays
     }
 
-    private fun fillExerciseList(days: DayModel){
+    private fun fillExerciseList(days: DayModel) {
         val tempList = ArrayList<ExerciseModel>()
-        days.exercises.split(",").forEach{
+        days.exercises.split(",").forEach {
             val exerciseList = resources.getStringArray(R.array.training_exercise)
             val exercise = exerciseList[it.toInt()]
             val exerciseArrays = exercise.split("|")
-            tempList.add(ExerciseModel(exerciseArrays[0], exerciseArrays[1], false, exerciseArrays[2]))
+            tempList.add(
+                ExerciseModel(
+                    exerciseArrays[0],
+                    exerciseArrays[1],
+                    false,
+                    exerciseArrays[2]
+                )
+            )
         }
         model.mutableExerciseList.value = tempList
     }
 
     companion object {
         @JvmStatic
-        fun newInstance()  = MainFragmentDays()
+        fun newInstance() = MainFragmentDays()
     }
 
     override fun onClick(days: DayModel) {
-        fillExerciseList(days)
-        model.currentDay = days.dayNumber
-       FragmentManager.setFragment(MainFragmentExerciseList.newInstance(), activity as AppCompatActivity)
+        if (!days.isDone) {
+            fillExerciseList(days)
+            model.currentDay = days.dayNumber
+            FragmentManager.setFragment(
+                MainFragmentExerciseList.newInstance(),
+                activity as AppCompatActivity
+            )
+        } else {
+            DialogMenu.showDialog(activity as AppCompatActivity, R.string.reset_day_message,
+                object : DialogMenu.Listener {
+                    override fun onClick() {
+                        model.savePreferences(days.dayNumber.toString(), 0)
+                        adapter.submitList(fillDaysArray())
+                        fillExerciseList(days)
+                        model.currentDay = days.dayNumber
+                        FragmentManager.setFragment(
+                            MainFragmentExerciseList.newInstance(),
+                            activity as AppCompatActivity
+                        )
+                    }
+                }
+            )
+        }
     }
- }
+}
