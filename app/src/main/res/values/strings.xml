@@ -16,4 +16,6 @@
     <string name="reset">Resetting</string>
     <string name="attention">Attention!!!</string>
     <string name="cancel">CANCEL!!</string>
+    <string name="reset_days_message">Are you really sure reset yours all days of training? \_/</string>
+    <string name="reset_day_message">Do you want reset only this day? \_/</string>
 </resources>
