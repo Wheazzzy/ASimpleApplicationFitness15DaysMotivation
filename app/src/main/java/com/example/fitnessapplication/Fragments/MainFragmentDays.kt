@@ -21,6 +21,11 @@ class MainFragmentDays: Fragment(), DayAdapter.Listener {
     private val model: MainViewModel by activityViewModels()
     private var actionBar: ActionBar? = null
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?): View {
@@ -35,7 +40,7 @@ class MainFragmentDays: Fragment(), DayAdapter.Listener {
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-
+        return inflater.inflate(R.menu.main_menu, menu)
     }
 
     private fun initializationRecyclerView() = with(binding){
