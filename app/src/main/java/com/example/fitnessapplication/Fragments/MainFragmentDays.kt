@@ -43,6 +43,12 @@ class MainFragmentDays: Fragment(), DayAdapter.Listener {
         return inflater.inflate(R.menu.main_menu, menu)
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        return super.onOptionsItemSelected(item)
+
+    }
+
     private fun initializationRecyclerView() = with(binding){
         val adapter = DayAdapter(this@MainFragmentDays)
         actionBar = (activity as AppCompatActivity).supportActionBar
