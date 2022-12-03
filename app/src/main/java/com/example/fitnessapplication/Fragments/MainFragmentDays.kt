@@ -75,4 +75,4 @@ class MainFragmentDays: Fragment(), DayAdapter.Listener {
         model.currentDay = days.dayNumber
        FragmentManager.setFragment(MainFragmentExerciseList.newInstance(), activity as AppCompatActivity)
     }
-}
+ }

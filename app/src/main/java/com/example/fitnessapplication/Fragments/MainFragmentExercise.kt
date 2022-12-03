@@ -24,6 +24,7 @@ class MainFragmentExercise : Fragment() {
     private var exerciseCounter = 0
     private var exerciseList: ArrayList<ExerciseModel>? = null
     private var actionBar: ActionBar? = null
+    private var currentDay = 0
     private val model: MainViewModel by activityViewModels()
 
     override fun onCreateView(
@@ -37,6 +38,7 @@ class MainFragmentExercise : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 //        Log.d("MyLog", "Counter ${model.getPreferences(model.currentDay.toString())}")
+        currentDay = model.currentDay
         exerciseCounter = model.getExerciseCounter()
         actionBar = (activity as AppCompatActivity).supportActionBar
         model.mutableExerciseList.observe(viewLifecycleOwner) {
@@ -118,7 +120,7 @@ class MainFragmentExercise : Fragment() {
 
     override fun onDetach() {
         super.onDetach()
-        model.savePreferences(model.currentDay.toString(), exerciseCounter - 1)
+        model.savePreferences(currentDay.toString(), exerciseCounter - 1)
         timer?.cancel()
     }
 
