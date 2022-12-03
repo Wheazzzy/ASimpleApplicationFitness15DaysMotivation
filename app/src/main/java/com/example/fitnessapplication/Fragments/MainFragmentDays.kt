@@ -17,6 +17,7 @@ import com.example.fitnessapplication.databinding.FragmentMainDaysBinding
 
 
 class MainFragmentDays: Fragment(), DayAdapter.Listener {
+    private lateinit var adapter: DayAdapter
     private lateinit var binding: FragmentMainDaysBinding
     private val model: MainViewModel by activityViewModels()
     private var actionBar: ActionBar? = null
@@ -46,13 +47,14 @@ class MainFragmentDays: Fragment(), DayAdapter.Listener {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(item.itemId == R.id.reset){
             model.preferences?.edit()?.clear()?.apply()
+            adapter.submitList(fillDaysArray())
         }
         return super.onOptionsItemSelected(item)
 
     }
 
     private fun initializationRecyclerView() = with(binding){
-        val adapter = DayAdapter(this@MainFragmentDays)
+        adapter = DayAdapter(this@MainFragmentDays)
         actionBar = (activity as AppCompatActivity).supportActionBar
         actionBar?.title = getString(R.string.days)
         recyclerViewDays.layoutManager = LinearLayoutManager(activity as AppCompatActivity)
