@@ -53,16 +53,18 @@ class MainFragmentDays: Fragment(), DayAdapter.Listener {
             val exerciseCounter = it.split(",").size
             tempArray.add(DayModel(it, 0,model.getExerciseCounter() == exerciseCounter))
         }
+        binding.progressBar2.max = tempArray.size
         tempArray.forEach{
             if(it.isDone) daysDoneCounter++
         }
-        updateRestDaysUI(tempArray.size - daysDoneCounter)
+        updateRestDaysUI(tempArray.size - daysDoneCounter, tempArray.size)
         return tempArray
     }
 
-    private fun updateRestDaysUI(restDays: Int) = with(binding){
+    private fun updateRestDaysUI(restDays: Int, days: Int) = with(binding){
         val rDays = getString(R.string.rest) + " $restDays " + getString(R.string.rest_days)
         textViewDays.text = rDays
+        progressBar2.progress = days - restDays
     }
 
     private fun fillExerciseList(days: DayModel){
