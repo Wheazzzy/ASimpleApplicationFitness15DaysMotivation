@@ -53,5 +53,4 @@ class DayAdapter(var listener: Listener) :
         fun onClick(days: DayModel)
 
     }
-
 }
