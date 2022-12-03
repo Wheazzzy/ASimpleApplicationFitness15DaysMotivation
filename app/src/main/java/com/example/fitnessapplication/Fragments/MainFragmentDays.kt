@@ -13,6 +13,7 @@ import com.example.fitnessapplication.Adapters.DayAdapter
 import com.example.fitnessapplication.Adapters.DayModel
 import com.example.fitnessapplication.Adapters.ExerciseModel
 import com.example.fitnessapplication.R
+import com.example.fitnessapplication.Utils.FragmentManager
 import com.example.fitnessapplication.Utils.MainViewModel
 import com.example.fitnessapplication.databinding.FragmentMainDaysBinding
 
@@ -46,6 +47,7 @@ class MainFragmentDays: Fragment(), DayAdapter.Listener {
     private fun fillDaysArray(): ArrayList<DayModel>{
         val tempArray = ArrayList<DayModel>()
         resources.getStringArray(R.array.exercise_days).forEach {
+            model.currentDay++
             tempArray.add(DayModel(it, 0,false))
         }
         return tempArray
@@ -70,6 +72,6 @@ class MainFragmentDays: Fragment(), DayAdapter.Listener {
     override fun onClick(days: DayModel) {
         fillExerciseList(days)
         model.currentDay = days.dayNumber
-       com.example.fitnessapplication.Utils.FragmentManager.setFragment(MainFragmentExerciseList.newInstance(), activity as AppCompatActivity)
+       FragmentManager.setFragment(MainFragmentExerciseList.newInstance(), activity as AppCompatActivity)
     }
 }

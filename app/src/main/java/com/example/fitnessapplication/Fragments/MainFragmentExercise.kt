@@ -21,10 +21,10 @@ import pl.droidsonroids.gif.GifDrawable
 class MainFragmentExercise : Fragment() {
     private var timer: CountDownTimer? = null
     private lateinit var binding: ExerciseFragmentBinding
-    private val model: MainViewModel by activityViewModels()
     private var exerciseCounter = 0
     private var exerciseList: ArrayList<ExerciseModel>? = null
     private var actionBar: ActionBar? = null
+    private val model: MainViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

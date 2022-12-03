@@ -9,7 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.fitnessapplication.R
 import com.example.fitnessapplication.databinding.DaysListItemBinding
 
-class DayAdapter(var listener: Listener): ListAdapter<DayModel, DayAdapter.DayHolder>(MyComparator()) {
+class DayAdapter(var listener: Listener) :
+    ListAdapter<DayModel, DayAdapter.DayHolder>(MyComparator()) {
 
     class DayHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val binding = DaysListItemBinding.bind(view)
@@ -20,6 +21,7 @@ class DayAdapter(var listener: Listener): ListAdapter<DayModel, DayAdapter.DayHo
             val exercisesCounter =
                 day.exercises.split(",").size.toString() + " " + root.context.getString(R.string.exercises)
             counters.text = exercisesCounter
+            checkBox.isChecked = day.isDone
             itemView.setOnClickListener {
                 listener.onClick(day.copy(dayNumber = adapterPosition + 1))
             }

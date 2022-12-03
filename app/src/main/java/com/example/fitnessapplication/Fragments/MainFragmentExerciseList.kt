@@ -34,6 +34,7 @@ class MainFragmentExerciseList : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        initialization()
         actionBar = (activity as AppCompatActivity).supportActionBar
         actionBar?.title = getString(R.string.exercise)
         model.mutableExerciseList.observe(viewLifecycleOwner) {
@@ -42,7 +43,6 @@ class MainFragmentExerciseList : Fragment() {
             }
             adapter.submitList(it)
         }
-        initialization()
     }
 
     private fun initialization() = with(binding) {
