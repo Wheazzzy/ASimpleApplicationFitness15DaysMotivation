@@ -9,7 +9,7 @@ import java.util.*
 object TimerUtils {
     private val formatter = SimpleDateFormat("mm.ss")
 
-    fun getTime(time: Long): String{
+    fun getTime(time: Long): String {
         val calendarView = Calendar.getInstance()
         calendarView.timeInMillis = time
         return formatter.format(calendarView.time)

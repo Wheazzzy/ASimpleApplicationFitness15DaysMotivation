@@ -7,13 +7,13 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fitnessapplication.R
-import com.example.fitnessapplication.databinding.DaysListItemBinding
 import com.example.fitnessapplication.databinding.ExerciseListItemBinding
 import pl.droidsonroids.gif.GifDrawable
 
-class ExerciseAdapter(): ListAdapter<ExerciseModel, ExerciseAdapter.ExerciseHolder>(MyComparator()) {
+class ExerciseAdapter() :
+    ListAdapter<ExerciseModel, ExerciseAdapter.ExerciseHolder>(MyComparator()) {
 
-    class ExerciseHolder(view: View): RecyclerView.ViewHolder(view) {
+    class ExerciseHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val binding = ExerciseListItemBinding.bind(view)
 
         fun settingData(exercise: ExerciseModel) = with(binding) {
@@ -25,8 +25,8 @@ class ExerciseAdapter(): ListAdapter<ExerciseModel, ExerciseAdapter.ExerciseHold
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExerciseHolder {
-        val view = LayoutInflater.from(parent.context).
-        inflate(R.layout.exercise_list_item, parent, false)
+        val view =
+            LayoutInflater.from(parent.context).inflate(R.layout.exercise_list_item, parent, false)
         return ExerciseHolder(view)
     }
 

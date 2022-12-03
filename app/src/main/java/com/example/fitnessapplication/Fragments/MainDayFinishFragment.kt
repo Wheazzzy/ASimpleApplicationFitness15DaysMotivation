@@ -43,7 +43,6 @@ class MainDayFinishFragment : Fragment() {
         }
     }
 
-
     companion object {
         @JvmStatic
         fun newInstance() = MainDayFinishFragment()
