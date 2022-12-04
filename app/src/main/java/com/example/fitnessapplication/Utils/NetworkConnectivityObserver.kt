@@ -3,9 +3,14 @@ package com.example.fitnessapplication.Utils
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.Network
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.callbackFlow
+import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.launch
 import java.util.concurrent.Flow
+
+
 
 class NetworkConnectivityObserver(
     private val context: Context
@@ -36,6 +41,10 @@ class NetworkConnectivityObserver(
                     launch { send(ConnectivityObserver.Status.Unavailable) }
                 }
             }
-        }
+            connectivityManager.registerDefaultNetworkCallback(callback)
+            awaitClose{
+             connectivityManager.unregisterNetworkCallback(callback)
+            }
+        }.distinctUntilChanged()
     }
 }
