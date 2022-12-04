@@ -4,7 +4,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="day">Days:</string>
     <string name="days">Days of training:</string>
-    <string name="exercises">Exercises left!</string>
+    <string name="exercises">Exercises!</string>
     <string name="exercise">Exercise</string>
     <string name="waiting_message">Starting your exercise through:</string>
     <string name="starting_exercise">START!</string>
@@ -13,7 +13,7 @@
     <string name="waiting">Waiting:</string>
     <string name="rest">LEFT:</string>
     <string name="rest_days">DAYS:</string>
-    <string name="reset">Resetting</string>
+    <string name="reset">Reset!!</string>
     <string name="attention">Attention!!!</string>
     <string name="cancel">CANCEL!!</string>
     <string name="reset_days_message">Are you really sure reset yours all days of training?</string>

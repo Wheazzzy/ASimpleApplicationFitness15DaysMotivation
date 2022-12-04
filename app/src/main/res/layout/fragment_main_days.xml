@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="1dp"
-    android:background="#43FFFFFF"
+    android:background="#FFFFFF"
     android:elevation="@dimen/cardview_default_radius"
     tools:context=".Fragments.MainFragmentDays">
 
@@ -61,6 +61,7 @@
                 android:text="Make your dream come true!!"
                 android:textAllCaps="true"
                 android:textColor="@color/white"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/image_main"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="@+id/image_main"
@@ -75,6 +76,7 @@
                 android:layout_marginEnd="15dp"
                 android:progress="50"
                 android:progressBackgroundTint="@color/white"
+                android:scaleY="2"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/image_main"
                 app:layout_constraintStart_toStartOf="@+id/image_main" />
