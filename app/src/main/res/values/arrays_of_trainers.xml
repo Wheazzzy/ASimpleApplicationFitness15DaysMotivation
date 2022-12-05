@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="training_exercise">
-       <item>Barbell press on biceps|x15|barbell press on biceps.gif</item> <!--exersize - 0-->
-        <item>Bending one arm while sitting|x15|bending one arm while sitting.gif</item> <!--exersize - 1-->
-        <item>Extension of the upper block|x25|extension of the upper block.gif</item> <!--exersize - 2-->
-        <item>Gym ganteley to sit|x25|gym ganteley sidya.gif</item> <!--exersize - 3 -->
-        <item>Hammers with dumbbells|x25|hammers with dumbbells.gif</item> <!--exersize - 4-->
-        <item>Information in the crossover lying on an inclined bench|x15|information in the crossover lying on an inclined bench.gif</item> <!--exersize - 5 -->
-        <item>Gym-legs|x15|jym-legs.gif</item> <!--exersize - 6 -->
+       <item>Barbell press on biceps|x25 repetitions|barbell press on biceps.gif</item> <!--exersize - 0-->
+        <item>Bending one arm while sitting|x25 repetitions|bending one arm while sitting.gif</item> <!--exersize - 1-->
+        <item>Extension of the upper block|60|extension of the upper block.gif</item> <!--exersize - 2-->
+        <item>Gym ganteley to sit|x20 repetitions|gym ganteley sidya.gif</item> <!--exersize - 3 -->
+        <item>Hammers with dumbbells|x35 repetitions|hammers with dumbbells.gif</item> <!--exersize - 4-->
+        <item>Information in the crossover lying on an inclined bench|30|information in the crossover lying on an inclined bench.gif</item> <!--exersize - 5 -->
+        <item>Gym-legs|45|jym-legs.gif</item> <!--exersize - 6 -->
         <item>Lifting dumbbells|x17|lifting dumbbells.gif</item> <!--exersize - 7 -->
-        <item>Lifting the barbell on the biceps|x15|lifting the barbell on the biceps.gif</item> <!--exersize - 8 -->
-        <item>Pull - ups|x15|pull - ups.gif</item> <!--exersize 9 -->
-        <item>Sitting-sgibanyagif|x15|sidya-sgibanyagif.gif</item> <!--exersize - 10 -->
-        <item>Squats|x25|squats.gif</item> <!--exersize - 11-->
-        <item>Triceps extensions|x10|triceps extensions.gif</item> <!--exersize - 12-->
-        <item>Twisting|x20|twisting.gif</item> <!--exersize - 13-->
-        <item>Gym ganteley|x15|zim-gantelej.gif</item> <!--exersize - 14-->
+        <item>Lifting the barbell on the biceps|x23 repetitions|lifting the barbell on the biceps.gif</item> <!--exersize - 8 -->
+        <item>Pull - ups|x15 repetitions|pull - ups.gif</item> <!--exersize 9 -->
+        <item>Sitting-sgibanyagif|45|sidya-sgibanyagif.gif</item> <!--exersize - 10 -->
+        <item>Squats|x25 repetitions|squats.gif</item> <!--exersize - 11-->
+        <item>Triceps extensions|x20 repetitions|triceps extensions.gif</item> <!--exersize - 12-->
+        <item>Twisting|x25 repetitions|twisting.gif</item> <!--exersize - 13-->
+        <item>Gym ganteley|x25 repetitions|zim-gantelej.gif</item> <!--exersize - 14-->
         <item>Relax|15|relax.gif</item><!--relax - 15 -->
         <item>Relax|45|relax.gif</item><!--relax - 16 -->
-        <item>Zim-uzkim-hvatom|x15|zim-uzkim-hvatom.gif</item><!--17-->
-        <item>Pullover in the block|x15|Pullover in the block.gif</item><!--18-->
+        <item>Zim-uzkim-hvatom|x15 repetitions|zim-uzkim-hvatom.gif</item><!--17-->
+        <item>Pullover in the block|45|Pullover in the block.gif</item><!--18-->
     </string-array>
 
     <string-array name="exercise_days">
