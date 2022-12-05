@@ -4,7 +4,6 @@
        <item>Barbell press on biceps|x15|barbell press on biceps.gif</item> <!--exersize - 0-->
         <item>Bending one arm while sitting|x15|bending one arm while sitting.gif</item> <!--exersize - 1-->
         <item>Extension of the upper block|x25|extension of the upper block.gif</item> <!--exersize - 2-->
-<!--        <item>Flexion lying on the simulator lying biceps hips|x10|Flexion lying on the simulator lying biceps hips.jpeg</item> &lt;!&ndash;exersize - 3&ndash;&gt;-->
         <item>Gym ganteley to sit|x25|gym ganteley sidya.gif</item> <!--exersize - 3 -->
         <item>Hammers with dumbbells|x25|hammers with dumbbells.gif</item> <!--exersize - 4-->
         <item>Information in the crossover lying on an inclined bench|x15|information in the crossover lying on an inclined bench.gif</item> <!--exersize - 5 -->
@@ -43,7 +42,7 @@
      <item>2,16,10,16,12,16,13,16,14,16,2,17,10,17,12,17,13,17,14,17</item> <!-- Day - 17 -->
      <item>7,16,11,16,3,16,5,16,4,16,7,17,11,17,3,17,5,17,4,17</item> <!--Day - 18 -->
      <item>8,16,9,16,0,16,8,17,9,17,0,17</item> <!--Day - 19 -->
-     <item>18,16,19,16,1,16,0,16,8,16,12,16,14,16,18,17,19,17,1,17,0,17,8,17,12,17,14,17</item> <!--Day - 20 -->
+     <item>18,16,19,16,1,16,1,16,8,16,12,16,14,16,18,17,19,17,1,17,1,17,8,17,12,17,14,17</item> <!--Day - 20 -->
      <item>0,16,4,16,5,16,6,16,15,16,0,17,4,17,5,17,6,17,15,17</item> <!--Day - 21 -->
      <item>2,16,10,16,12,16,13,16,14,16,2,17,10,17,12,17,13,17,14,17</item> <!-- Day - 22 -->
      <item>7,16,11,16,3,16,5,16,4,16,7,17,11,17,3,17,5,17,4,17</item> <!--Day - 23 -->

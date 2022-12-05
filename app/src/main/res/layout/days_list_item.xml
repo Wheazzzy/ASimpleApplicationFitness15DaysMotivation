@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:text="TextView"
                 android:textColor="#F44336"
-                android:textStyle="italic" />
+                android:textStyle="bold|italic" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
