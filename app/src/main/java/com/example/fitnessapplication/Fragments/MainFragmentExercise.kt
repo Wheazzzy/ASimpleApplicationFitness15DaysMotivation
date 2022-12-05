@@ -19,6 +19,7 @@ import pl.droidsonroids.gif.GifDrawable
 
 
 class MainFragmentExercise : Fragment() {
+
     private var timer: CountDownTimer? = null
     private lateinit var binding: ExerciseFragmentBinding
     private var exerciseCounter = 0
@@ -37,7 +38,6 @@ class MainFragmentExercise : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        Log.d("MyLog", "Counter ${model.getPreferences(model.currentDay.toString())}")
         currentDay = model.currentDay
         exerciseCounter = model.getExerciseCounter()
         actionBar = (activity as AppCompatActivity).supportActionBar
@@ -68,7 +68,7 @@ class MainFragmentExercise : Fragment() {
     private fun showExercise(exerciseModel: ExerciseModel) = with(binding) {
         imageViewMain.setImageDrawable(GifDrawable(root.context.assets, exerciseModel.image))
         textViewName.text = exerciseModel.name
-        val title = "$exerciseCounter / ${exerciseList?.size} exercises"
+        val title = "$exerciseCounter / ${exerciseList?.size} exercises ||| Counter / List"
         actionBar?.title = title
     }
 
