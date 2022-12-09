@@ -1,58 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="training_exercise">
-       <item>Barbell press on biceps|x25 repetitions|barbell press on biceps.gif</item> <!--exersize - 0-->
-        <item>Bending one arm while sitting|x25 repetitions|bending one arm while sitting.gif</item> <!--exersize - 1-->
-        <item>Extension of the upper block|60|extension of the upper block.gif</item> <!--exersize - 2-->
-        <item>Gym ganteley to sit|x20 repetitions|gym ganteley sidya.gif</item> <!--exersize - 3 -->
-        <item>Hammers with dumbbells|x35 repetitions|hammers with dumbbells.gif</item> <!--exersize - 4-->
-        <item>Information in the crossover lying on an inclined bench|30|information in the crossover lying on an inclined bench.gif</item> <!--exersize - 5 -->
-        <item>Gym-legs|45|jym-legs.gif</item> <!--exersize - 6 -->
-        <item>Lifting dumbbells|x17|lifting dumbbells.gif</item> <!--exersize - 7 -->
-        <item>Lifting the barbell on the biceps|x23 repetitions|lifting the barbell on the biceps.gif</item> <!--exersize - 8 -->
-        <item>Pull - ups|x15 repetitions|pull - ups.gif</item> <!--exersize 9 -->
-        <item>Sitting-sgibanyagif|45|sidya-sgibanyagif.gif</item> <!--exersize - 10 -->
-        <item>Squats|x25 repetitions|squats.gif</item> <!--exersize - 11-->
-        <item>Triceps extensions|x20 repetitions|triceps extensions.gif</item> <!--exersize - 12-->
-        <item>Twisting|x25 repetitions|twisting.gif</item> <!--exersize - 13-->
-        <item>Gym ganteley|x25 repetitions|zim-gantelej.gif</item> <!--exersize - 14-->
-        <item>Relax|15|relax.gif</item><!--relax - 15 -->
-        <item>Relax|45|relax.gif</item><!--relax - 16 -->
-        <item>Zim-uzkim-hvatom|x15 repetitions|zim-uzkim-hvatom.gif</item><!--17-->
-        <item>Pullover in the block|45|Pullover in the block.gif</item><!--18-->
+<!--       <item>Barbell press on biceps|x25 repetitions|barbell press on biceps.gif</item> &lt;!&ndash;exersize - 0&ndash;&gt;-->
+<!--        <item>Bending one arm while sitting|x25 repetitions|bending one arm while sitting.gif</item> &lt;!&ndash;exersize - 1&ndash;&gt;-->
+<!--        <item>Extension of the upper block|60|extension of the upper block.gif</item> &lt;!&ndash;exersize - 2&ndash;&gt;-->
+<!--        <item>Gym ganteley to sit|x20 repetitions|gym ganteley sidya.gif</item> &lt;!&ndash;exersize - 3 &ndash;&gt;-->
+<!--        <item>Hammers with dumbbells|x35 repetitions|hammers with dumbbells.gif</item> &lt;!&ndash;exersize - 4&ndash;&gt;-->
+<!--        <item>Information in the crossover lying on an inclined bench|30|information in the crossover lying on an inclined bench.gif</item> &lt;!&ndash;exersize - 5 &ndash;&gt;-->
+<!--        <item>Gym-legs|45|jym-legs.gif</item> &lt;!&ndash;exersize - 6 &ndash;&gt;-->
+<!--        <item>Lifting dumbbells|x17|lifting dumbbells.gif</item> &lt;!&ndash;exersize - 7 &ndash;&gt;-->
+<!--        <item>Lifting the barbell on the biceps|x23 repetitions|lifting the barbell on the biceps.gif</item> &lt;!&ndash;exersize - 8 &ndash;&gt;-->
+<!--        <item>Pull - ups|x15 repetitions|pull - ups.gif</item> &lt;!&ndash;exersize 9 &ndash;&gt;-->
+<!--        <item>Sitting-sgibanyagif|45|sidya-sgibanyagif.gif</item> &lt;!&ndash;exersize - 10 &ndash;&gt;-->
+<!--        <item>Squats|x25 repetitions|squats.gif</item> &lt;!&ndash;exersize - 11&ndash;&gt;-->
+<!--        <item>Triceps extensions|x20 repetitions|triceps extensions.gif</item> &lt;!&ndash;exersize - 12&ndash;&gt;-->
+<!--        <item>Twisting|x25 repetitions|twisting.gif</item> &lt;!&ndash;exersize - 13&ndash;&gt;-->
+<!--        <item>Gym ganteley|x25 repetitions|zim-gantelej.gif</item> &lt;!&ndash;exersize - 14&ndash;&gt;-->
+<!--        <item>Its time to Relax|15|relax.gif</item>&lt;!&ndash;relax - 15 &ndash;&gt;-->
+<!--        <item>Relax|45|relax.gif</item>&lt;!&ndash;relax - 16 &ndash;&gt;-->
+<!--        <item>Zim-uzkim-hvatom|x15 repetitions|zim-uzkim-hvatom.gif</item>&lt;!&ndash;17&ndash;&gt;-->
+     <item>Barbell press on biceps|x20 repetitions|barbell press on biceps.gif</item>
+     <item>Body weight Squats The Ultimate Guide|x38 repetitions|38 Different Types of Bodyweight Squats_ The Ultimate Guide _ Yuri Elkaim.gif</item>
+     <item>Alternating Lateral Pistol Squat|45|Alternating Lateral Pistol Squat.gif</item>
+     <item>Bear Crawl Squat|30|Bear Crawl Squat.gif</item>
+     <item>Bending one arm while sitting|x30 repetitions|bending one arm while sitting.gif</item>
+     <item>Triceps Exercises|x25 repetitions|Build 3D Arms With These 25 Triceps Exercises.gif</item>
+     <item>Extension of the upper block|x30 repetitions|extension of the upper block.gif</item>
+     <item>Gym ganteley to sit|20|gym ganteley sidya.gif</item>
+     <item>Hammers with dumbbells|x25|hammers with dumbbells.gif</item>
+     <item>Hollow-Body Hold Rock|30|Hollow-Body Hold Rock.gif</item>
+     <item>The crossover lying on an inclined bench|x30|information in the crossover lying on an inclined bench.gif</item>
+     <item>Isometric Jump Squat Ladder|x60|Isometric Jump Squat Ladder.gif</item>
+     <item>Jym-legs|50|jym-legs.gif</item>
+     <item>Lifting dumbbells|x30|lifting dumbbells.gif</item>
+     <item>Lifting the barbell on the biceps|x15|lifting the barbell on the biceps.gif</item>
+     <item>Pike Push up|x20|Pike Pushup.gif</item>
+     <item>Pull-ups|x15|pull - ups.gif</item>
+     <item>Siting-sgibanya|30|sidya-sgibanyagif.gif</item>
+     <item>Squats|x25|squats.gif</item>
+     <item>Standing Leg Raise|x30|Standing Leg Raise.gif</item>
+     <item>The Belly-Fat Inferno|30|The Belly-Fat Inferno.gif</item>
+     <item>The Spartacus Workout|30|The Spartacus Workout.gif</item>
+     <item>The Body weight glutes Workout|180|The 3-Minute Bodyweight Glutes Workout.gif</item>
+     <item>Strength-Training Program You Need to Get Strong Fast|30|The 10-Week Strength-Training Program You Need to Get Strong Fast.gif</item>
+     <item>Let"s go up(each leg 15 repetitions)|x30|This Workout Will Prepare You For Obstacle Course Race Glory.gif</item>
+     <item>Triceps extensions|x30|triceps extensions.gif</item>
+     <item>Twisting|30|twisting.gif</item>
+     <item>Walkup|x30|Walkup.gif</item>
+     <item>Zim-gantelei|x25|zim-gantelej.gif</item>
+     <item>zim-uzkim-hvatom|x15|zim-uzkim-hvatom.gif</item>
+     <item></item>
+     <item></item>
+     <item></item>
     </string-array>
 
     <string-array name="exercise_days">
-     <item>0,15,3,15,4,15,5,15,14,15,0,16,3,16,4,16,5,16,14,16</item> <!--Day - 1 -->
-     <item>2,16,10,16,12,16,13,16,14,16,2,17,10,17,12,17,13,17,14,17</item> <!-- Day - 2 -->
-     <item>6,15,10,15,2,15,4,15,3,15,6,16,10,16,2,16,4,16,3,16</item> <!--Day - 3 -->
-     <item>8,6,15,9,15,0,15,8,15,9</item> <!--Day - 4-->
-     <item>2,16,10,16,12,16,13,16,14,16,2,17,10,17,12,17,13,17,14,17</item> <!--Day - 5-->
-     <item>2,16,10,16,12,16,13,16,14,16,2,17,10,17,12,17,13,17,14,17</item> <!--Day - 6 -->
-     <item>2,16,10,16,12,16,13,16,14,16,2,17,10,17,12,17,13,17,14,17</item> <!-- Day - 7 -->
-     <item>2,16,10,16,12,16,13,16,14,16,2,17,10,17,12,17,13,17,14,17</item> <!--Day - 8 -->
-     <item>8,16,10,16,12,16,13,16,14,16,2,17,10,17,12,17,13,17,14,17</item> <!--Day - 9-->
-     <item>2,16,10,16,12,16,13,16,14,16,2,17,10,17,12,17,13,17,14,17</item> <!--Day - 10 -->
-     <item>2,16,10,16,12,16,13,16,14,16,2,17,10,17,12,17,13,17,14,17</item> <!--Day - 11 -->
-     <item>2,16,10,16,12,16,13,16,14,16,2,17,10,17,12,17,13,17,14,17</item> <!-- Day - 12 -->
-     <item>7,16,11,16,3,16,5,16,4,16,7,17,11,17,3,17,5,17,4,17</item> <!--Day - 13 -->
-     <item>8,16,9,16,0,16,8,17,9,17,0,17</item> <!--Day - 14-->
-     <item>2,16,10,16,12,16,13,16,14,16,2,17,10,17,12,17,13,17,14,17</item> <!--Day - 15 -->
-     <item>0,16,4,16,5,16,6,16,15,16,0,17,4,17,5,17,6,17,15,17</item> <!--Day - 16 -->
-     <item>2,16,10,16,12,16,13,16,14,16,2,17,10,17,12,17,13,17,14,17</item> <!-- Day - 17 -->
-     <item>7,16,11,16,3,16,5,16,4,16,7,17,11,17,3,17,5,17,4,17</item> <!--Day - 18 -->
-     <item>8,16,9,16,0,16,8,17,9,17,0,17</item> <!--Day - 19 -->
-     <item>18,16,19,16,1,16,1,16,8,16,12,16,14,16,18,17,19,17,1,17,1,17,8,17,12,17,14,17</item> <!--Day - 20 -->
-     <item>0,16,4,16,5,16,6,16,15,16,0,17,4,17,5,17,6,17,15,17</item> <!--Day - 21 -->
-     <item>2,16,10,16,12,16,13,16,14,16,2,17,10,17,12,17,13,17,14,17</item> <!-- Day - 22 -->
-     <item>7,16,11,16,3,16,5,16,4,16,7,17,11,17,3,17,5,17,4,17</item> <!--Day - 23 -->
-     <item>8,16,9,16,0,16,8,17,9,17,0,17</item> <!--Day - 24-->
-     <item>2,16,10,16,12,16,13,16,14,16,2,17,10,17,12,17,13,17,14,17</item> <!--Day - 25-->
-     <item>0,16,4,16,5,16,6,16,15,16,0,17,4,17,5,17,6,17,15,17</item> <!--Day - 26 -->
-     <item>2,16,10,16,12,16,13,16,14,16,2,17,10,17,12,17,13,17,14,17</item> <!-- Day - 27 -->
-     <item>7,16,11,16,3,16,5,16,4,16,7,17,11,17,3,17,5,17,4,17</item> <!--Day - 28 -->
-     <item>8,16,9,16,0,16,8,17,9,17,0,17</item> <!--Day - 29 -->
-     <item>2,16,10,16,12,16,13,16,14,16,2,17,10,17,12,17,13,17,14,17</item> <!--Day - 30 -->
+     <item>0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29</item>
+<!--     <item>0,15,3,15,4,15,5,15,14,15,0,16,3,16,4,16,5,16,14,16</item> &lt;!&ndash;Day - 1 &ndash;&gt;-->
+<!--     <item>2,16,10,16,12,16,13,16,14,16,2,17,10,17,12,17,13,17,14,17</item> &lt;!&ndash; Day - 2 &ndash;&gt;-->
+<!--     <item>6,15,10,15,2,15,4,15,3,15,6,16,10,16,2,16,4,16,3,16</item> &lt;!&ndash;Day - 3 &ndash;&gt;-->
+<!--     <item>8,6,15,9,15,0,15,8,15,9</item> &lt;!&ndash;Day - 4&ndash;&gt;-->
+<!--     <item>2,16,10,16,12,16,13,16,14,16,2,17,10,17,12,17,13,17,14,17</item> &lt;!&ndash;Day - 5&ndash;&gt;-->
+<!--     <item>2,16,10,16,12,16,13,16,14,16,2,17,10,17,12,17,13,17,14,17</item> &lt;!&ndash;Day - 6 &ndash;&gt;-->
+<!--     <item>2,16,10,16,12,16,13,16,14,16,2,17,10,17,12,17,13,17,14,17</item> &lt;!&ndash; Day - 7 &ndash;&gt;-->
+<!--     <item>2,16,10,16,12,16,13,16,14,16,2,17,10,17,12,17,13,17,14,17</item> &lt;!&ndash;Day - 8 &ndash;&gt;-->
+<!--     <item>8,16,10,16,12,16,13,16,14,16,2,17,10,17,12,17,13,17,14,17</item> &lt;!&ndash;Day - 9&ndash;&gt;-->
+<!--     <item>2,16,10,16,12,16,13,16,14,16,2,17,10,17,12,17,13,17,14,17</item> &lt;!&ndash;Day - 10 &ndash;&gt;-->
+<!--     <item>2,16,10,16,12,16,13,16,14,16,2,17,10,17,12,17,13,17,14,17</item> &lt;!&ndash;Day - 11 &ndash;&gt;-->
+<!--     <item>2,16,10,16,12,16,13,16,14,16,2,17,10,17,12,17,13,17,14,17</item> &lt;!&ndash; Day - 12 &ndash;&gt;-->
+<!--     <item>7,16,11,16,3,16,5,16,4,16,7,17,11,17,3,17,5,17,4,17</item> &lt;!&ndash;Day - 13 &ndash;&gt;-->
+<!--     <item>8,16,9,16,0,16,8,17,9,17,0,17</item> &lt;!&ndash;Day - 14&ndash;&gt;-->
+<!--     <item>2,16,10,16,12,16,13,16,14,16,2,17,10,17,12,17,13,17,14,17</item> &lt;!&ndash;Day - 15 &ndash;&gt;-->
+<!--     <item>0,16,4,16,5,16,6,16,15,16,0,17,4,17,5,17,6,17,15,17</item> &lt;!&ndash;Day - 16 &ndash;&gt;-->
+<!--     <item>2,16,10,16,12,16,13,16,14,16,2,17,10,17,12,17,13,17,14,17</item> &lt;!&ndash; Day - 17 &ndash;&gt;-->
+<!--     <item>7,16,11,16,3,16,5,16,4,16,7,17,11,17,3,17,5,17,4,17</item> &lt;!&ndash;Day - 18 &ndash;&gt;-->
+<!--     <item>8,16,9,16,0,16,8,17,9,17,0,17</item> &lt;!&ndash;Day - 19 &ndash;&gt;-->
+<!--     <item>16,19,16,1,16,1,16,8,16,12,16,14,16,17,19,17,1,17,1,17,8,17,12,17,14,17</item> &lt;!&ndash;Day - 20 &ndash;&gt;-->
+<!--     <item>0,16,4,16,5,16,6,16,15,16,0,17,4,17,5,17,6,17,15,17</item> &lt;!&ndash;Day - 21 &ndash;&gt;-->
+<!--     <item>2,16,10,16,12,16,13,16,14,16,2,17,10,17,12,17,13,17,14,17</item> &lt;!&ndash; Day - 22 &ndash;&gt;-->
+<!--     <item>7,16,11,16,3,16,5,16,4,16,7,17,11,17,3,17,5,17,4,17</item> &lt;!&ndash;Day - 23 &ndash;&gt;-->
+<!--     <item>8,16,9,16,0,16,8,17,9,17,0,17</item> &lt;!&ndash;Day - 24&ndash;&gt;-->
+<!--     <item>2,16,10,16,12,16,13,16,14,16,2,17,10,17,12,17,13,17,14,17</item> &lt;!&ndash;Day - 25&ndash;&gt;-->
+<!--     <item>0,16,4,16,5,16,6,16,15,16,0,17,4,17,5,17,6,17,15,17</item> &lt;!&ndash;Day - 26 &ndash;&gt;-->
+<!--     <item>2,16,10,16,12,16,13,16,14,16,2,17,10,17,12,17,13,17,14,17</item> &lt;!&ndash; Day - 27 &ndash;&gt;-->
+<!--     <item>7,16,11,16,3,16,5,16,4,16,7,17,11,17,3,17,5,17,4,17</item> &lt;!&ndash;Day - 28 &ndash;&gt;-->
+<!--     <item>8,16,9,16,0,16,8,17,9,17,0,17</item> &lt;!&ndash;Day - 29 &ndash;&gt;-->
+<!--     <item>2,16,10,16,12,16,13,16,14,16,2,17,10,17,12,17,13,17,14,17</item> &lt;!&ndash;Day - 30 &ndash;&gt;-->
     </string-array>
 
 
