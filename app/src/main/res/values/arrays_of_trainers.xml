@@ -1,47 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="training_exercise">
-     <item>Barbell press on biceps|x20 repetitions|barbell press on biceps.gif</item>
-     <item>Body weight Squats The Ultimate Guide|x38 repetitions|38 Different Types of Bodyweight Squats_ The Ultimate Guide _ Yuri Elkaim.gif</item>
-     <item>Alternating Lateral Pistol Squat|45|Alternating Lateral Pistol Squat.gif</item>
-     <item>Bear Crawl Squat|30|Bear Crawl Squat.gif</item>
-     <item>Bending one arm while sitting|x30 repetitions|bending one arm while sitting.gif</item>
-     <item>Triceps Exercises|x25 repetitions|Build 3D Arms With These 25 Triceps Exercises.gif</item>
-     <item>Extension of the upper block|x30 repetitions|extension of the upper block.gif</item>
-     <item>Gym ganteley to sit|20|gym ganteley sidya.gif</item>
-     <item>Hammers with dumbbells|x25|hammers with dumbbells.gif</item>
-     <item>Hollow-Body Hold Rock|30|Hollow-Body Hold Rock.gif</item>
-     <item>The crossover lying on an inclined bench|x30|information in the crossover lying on an inclined bench.gif</item>
-     <item>Isometric Jump Squat Ladder|x60|Isometric Jump Squat Ladder.gif</item>
-     <item>Jym-legs|50|jym-legs.gif</item>
-     <item>Lifting dumbbells|x30|lifting dumbbells.gif</item>
-     <item>Lifting the barbell on the biceps|x15|lifting the barbell on the biceps.gif</item>
-     <item>Pike Push up|x20|Pike Pushup.gif</item>
-     <item>Pull-ups|x15|pull - ups.gif</item>
-     <item>Siting-sgibanya|30|sidya-sgibanyagif.gif</item>
-     <item>Squats|x25|squats.gif</item>
-     <item>Standing Leg Raise|x30|Standing Leg Raise.gif</item>
-     <item>The Belly-Fat Inferno|30|The Belly-Fat Inferno.gif</item>
-     <item>The Spartacus Workout|30|The Spartacus Workout.gif</item>
+     <item>Barbell press on biceps|x20 repetitions|barbell press on biceps.gif</item> <!--Exercise - 0 -->
+     <item>Body weight Squats The Ultimate Guide|x38 repetitions|38 Different Types of Bodyweight Squats_ The Ultimate Guide _ Yuri Elkaim.gif</item> <!--Exercise - 1 -->
+     <item>Alternating Lateral Pistol Squat|45|Alternating Lateral Pistol Squat.gif</item><!--Exercise - 2 -->
+     <item>Bear Crawl Squat|30|Bear Crawl Squat.gif</item> <!--Exercise - 3 -->
+     <item>Bending one arm while sitting|x30 repetitions|bending one arm while sitting.gif</item> <!--Exercise - 4 -->
+     <item>Triceps Exercises|x25 repetitions|Build 3D Arms With These 25 Triceps Exercises.gif</item> <!--Exercise - 5 -->
+     <item>Extension of the upper block|x30 repetitions|extension of the upper block.gif</item> <!--Exercise - 6 -->
+     <item>Gym ganteley to sit|20|gym ganteley sidya.gif</item><!--Exercise - 7 -->
+     <item>Hammers with dumbbells|x25|hammers with dumbbells.gif</item> <!--Exercise - 8 -->
+     <item>Hollow-Body Hold Rock|30|Hollow-Body Hold Rock.gif</item><!--Exercise - 9  -->
+     <item>The crossover lying on an inclined bench|x30|information in the crossover lying on an inclined bench.gif</item><!--Exercise - 10 -->
+     <item>Isometric Jump Squat Ladder|x60|Isometric Jump Squat Ladder.gif</item><!--Exercise - 11 -->
+     <item>Jym-legs|50|jym-legs.gif</item><!--Exercise - 11 -->
+     <item>Lifting dumbbells|x30|lifting dumbbells.gif</item> <!--Exercise - 12 -->
+     <item>Lifting the barbell on the biceps|x15|lifting the barbell on the biceps.gif</item><!--Exercise - 13 -->
+     <item>Pike Push up|x20|Pike Pushup.gif</item><!--Exercise - 14 -->
+     <item>Pull-ups|x15|pull - ups.gif</item><!--Exercise - 15 -->
+     <item>Siting-sgibanya|30|sidya-sgibanyagif.gif</item><!--Exercise - 16 -->
+     <item>Squats|x25|squats.gif</item><!--Exercise - 17 -->
+     <item>Standing Leg Raise|x30|Standing Leg Raise.gif</item><!--Exercise - 18 -->
+     <item>The Belly-Fat Inferno|30|The Belly-Fat Inferno.gif</item><!--Exercise - 19 -->
+     <item>The Spartacus Workout|30|The Spartacus Workout.gif</item><!--Exercise - 20-->
      <item>The Body weight glutes Workout|180|The 3-Minute Bodyweight Glutes Workout.gif</item>
-     <item>Strength-Training Program You Need to Get Strong Fast|30|The 10-Week Strength-Training Program You Need to Get Strong Fast.gif</item>
-     <item>Let"s go up(each leg 15 repetitions)|x30|This Workout Will Prepare You For Obstacle Course Race Glory.gif</item>
-     <item>Triceps extensions|x30|triceps extensions.gif</item>
-     <item>Twisting|30|twisting.gif</item>
-     <item>Walkup|x30|Walkup.gif</item>
-     <item>Zim-gantelei|x25|zim-gantelej.gif</item>
-     <item>zim-uzkim-hvatom|x15|zim-uzkim-hvatom.gif</item>
-     <item>It"s time to Relax|30|relax.gif</item>
-     <item>Man Makers|x15|Man Makers.gif</item>
-     <item>Ring Muscle-Ups|x15|Ring Muscle-Ups.gif</item>
-     <item>Snatch|30|Snatch.gif</item>
-     <item>Jym ot bedra|70|Jym ot bedra.gif</item>
-     <item>Pistol Squats|x30|Pistol Squats.gif</item>
-     <item>Running|700|Runing.gif</item>
+     <item>Strength-Training Program You Need to Get Strong Fast|30|The 10-Week Strength-Training Program You Need to Get Strong Fast.gif</item><!--Exercise - 21-->
+     <item>Let"s go up(each leg 15 repetitions)|x30|This Workout Will Prepare You For Obstacle Course Race Glory.gif</item><!--Exercise - 22-->
+     <item>Triceps extensions|x30|triceps extensions.gif</item><!--Exercise - 23-->
+     <item>Twisting|30|twisting.gif</item><!--Exercise - 24-->
+     <item>Walkup|x30|Walkup.gif</item><!--Exercise - 25-->
+     <item>Zim-gantelei|x25|zim-gantelej.gif</item><!--Exercise - 26-->
+     <item>zim-uzkim-hvatom|x15|zim-uzkim-hvatom.gif</item><!--Exercise - 27-->
+     <item>It"s time to Relax|30|relax.gif</item><!-- Relaxing - 28-->
+     <item>It"s time to Relax|45|relax.gif</item><!-- Relaxing - 29 -->
+     <item>Man Makers|x15|Man Makers.gif</item><!--Exercise - 30 -->
+     <item>Ring Muscle-Ups|x15|Ring Muscle-Ups.gif</item><!--Exercise - 31 -->
+     <item>Snatch|30|Snatch.gif</item> <!--Exercise - 32 -->
+     <item>Jym ot bedra|70|Jym ot bedra.gif</item><!--Exercise - 33 -->
+     <item>Pistol Squats|x30|Pistol Squats.gif</item><!--Exercise - 34 -->
+     <item>Running|700|Runing.gif</item><!--Exercise - 35 -->
     </string-array>
 
     <string-array name="exercise_days">
-     <item>0,30,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,31,32,33,34,35,36</item>
+     <item>0,30,4,30,5,6,30,7,30,8,30,9,30,11,30,18</item>
+     <item>1,30,2,30,3,30,4,30,5,30,6,30,7,30,8,30,9,10</item>
+     <item>11,31,12,30,13,30,14,30,15,30,16,30,17,30,18,30,19</item>
+     <item>20,30,21,30,22,30,23,30,24,30,25,30,26,30,27,30,28,30,29</item>
+     <item>32,31,33,31,34,31,35,31,36,31,37,5,30,15,30,19,20,27</item>
+     <item>22,30,35,36,34,30,5,9,30,14,1,0,30,15,16,17,30,27</item>
+     <item>37,30,36,30,35,30,34,30,33,30,32,30,29,28,30,27,26,25</item>
+     <item>24,30,23,22,30,21,30,20,30,19,30,18,30,17,30,16,30,15,14,13</item>
+     <item>12,30,11,30,10,9,30,8,30,7,30,6,30,5,30,4,30,3,30,2,30,1,30,0,35,34</item>
+     <item>5,30,6,30,20,30,21,30,25,30,26,30,15,30,14,30,13,37,36</item>
+     <item>17,30,18,30,19,30,20,30,21,30,22,30,32,30,33,30,35,36</item>
+     <item>0,30,25,30,26,30,5,30,9,30,11,30,22,30,33,30,1,2,3</item>
+     <item>37,31,36,31,35,31,34,31,33,31,1,31,2,31,15,16,31,17,18</item>
+     <item>29,30,25,20,30,15,30,10,30,5,30,0,30,35,31,11,22</item>
+     <item>5,30,6,30,7,25,19,30,18,30,17,10,11,31,12,30,13,30,14,30,32,33,34,35,36,37,31,31,5,4</item>
+
+
     </string-array>
 
 
