@@ -3,7 +3,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="day">Day:</string>
-    <string name="days">Days of training: 30 days challenge</string>
+    <string name="days">Days of training: 15 days challenge</string>
     <string name="exercises">Exercises you will cover!</string>
     <string name="exercise">Exercise</string>
     <string name="waiting_message">Starting your exercise through:</string>
