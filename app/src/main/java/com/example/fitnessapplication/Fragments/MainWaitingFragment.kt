@@ -39,7 +39,7 @@ class MainWaitingFragment : Fragment() {
     }
 
     private fun startingTime() = with(binding) {
-        timer = object : CountDownTimer(COUNT_DOWN_TIMER, 1) {
+        timer = object : CountDownTimer(COUNT_DOWN_TIMER, 5) {
             override fun onTick(resultTime: Long) {
                 textViewTimer.text = TimerUtils.getTime(resultTime)
                 progressBar.progress = resultTime.toInt()

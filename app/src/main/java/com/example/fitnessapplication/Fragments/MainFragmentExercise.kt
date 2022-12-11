@@ -84,8 +84,9 @@ class MainFragmentExercise : Fragment() {
         if (exerciseCounter < exerciseList?.size!!) {
             val exersize = exerciseList?.get(exerciseCounter) ?: return
             imageMainNext.setImageDrawable(GifDrawable(root.context.assets, exersize.image))
+            val name = exersize.name + ": ${exersize.time}"
             setTimeType(exersize)
-            textViewNextName.text = exersize.name
+            textViewNextName.text = name
         } else {
             imageMainNext.setImageDrawable(GifDrawable(root.context.assets, "Congratulations.gif"))
             textViewNextName.text = getString(R.string.done)
