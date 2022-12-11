@@ -8,7 +8,6 @@ import com.example.fitnessapplication.Utils.FragmentManager
 import com.example.fitnessapplication.Utils.MainViewModel
 
 
-
 class MainActivity : AppCompatActivity() {
     private val model: MainViewModel by viewModels()
 

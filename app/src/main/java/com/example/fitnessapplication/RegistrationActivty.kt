@@ -3,6 +3,7 @@ package com.example.fitnessapplication
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
@@ -28,6 +29,11 @@ class RegistrationActivty : AppCompatActivity() {
             val intent = Intent(this, LogInActivity::class.java)
             startActivity(intent)
         }
+        val registerButton: Button = findViewById(R.id.button_registration)
+        registerButton.setOnClickListener{
+            signUp()
+        }
+
         signUp()
     }
 
